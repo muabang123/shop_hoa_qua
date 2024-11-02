@@ -199,6 +199,53 @@
 	    color: #fff;
 	}
 
+	.__history-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .__history-tracking-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .__history-step {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .__history-actions {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .__history-btn {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+    }
+
+    .__history-product {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .__history-product img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .__history-summary-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .__history-summary-row p {
+        margin: 5px 0;
+    }
+
 }
 
 /* Mobile Layout: 320px. */
