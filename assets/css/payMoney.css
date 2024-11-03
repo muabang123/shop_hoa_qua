@@ -174,6 +174,7 @@
     height: 41px;
     background-color: #F28123;
     color: white;
+    border-style: dashed;
 }
 
 .Provisional {
@@ -208,7 +209,15 @@
     background-color: #F28123;
     color: white;
     padding: 8px 14px;
+    border-style: none;
 }
+
+.btn-submit:hover , .btn-discount:hover {
+    background-color: #000;
+    color: #fff;
+}
+    
+
 
 .field-district,
 .field-province {
@@ -341,6 +350,14 @@
     background-color: #F28123;
     padding: 10px 10px;
     color: #000;
+    border-radius: 5px;
+}
+
+
+
+.checkout__link #info-default:hover {
+    background-color: #000 !important;
+    color: #fff !important;
 }
 
 .checkout__link #info-input {

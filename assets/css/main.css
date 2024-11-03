@@ -2903,6 +2903,7 @@ table.order-details tbody td {
 
 .user-icon:hover .dropdown-user-info{
   display: block;
+  animation: bounceIn ease 0.5s;
 }
 
 .dropdown-user-info {
