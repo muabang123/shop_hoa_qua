@@ -245,6 +245,54 @@
     .__history-summary-row p {
         margin: 5px 0;
     }
+	.user-icon {
+		padding-left: 5px;
+		margin-right: 10px;
+	  }
+	
+	  .dropdown-user-info {
+		font-size: 16px;
+		width: 200px;
+		top: 100%;
+		right: 0;
+		padding: 6px 8px;
+	  }
+	
+	  .dropdown-user-info::after {
+		width: 50px;
+		height: 10px;
+		top: -8px;
+		right: 10px;
+	  }
+	
+	  .dropdown-user-info-name {
+		font-size: 16px;
+	  }
+	
+	  .dropdown-user-info-history {
+		font-size: 14px;
+	  }
+	
+	  .dropdown-user-info-history-content h3 {
+		font-size: 22px;
+	  }
+	
+	  .dropdown-user-info-history-box {
+		padding: 10px;
+	  }
+	  .section__user {
+		flex-direction: column;
+		gap: 0;
+	}
+	.section-left__user, .section-right__user {
+		width: 100%;
+	}
+	.button__user {
+		width: 100%;
+	}
+	.header__user {
+		font-size: 16px;
+	}
 
 }
 
@@ -603,6 +651,25 @@
 	    z-index: 999;
 	    color: #fff;
 	}
+
+	.user-info__logout {
+		font-size: 14px;
+		padding: 10px;
+	  }
+
+	  .container__user {
+		padding: 15px;
+	}
+	.header__user {
+		font-size: 14px;
+	}
+	.action-button__user {
+		padding: 5px 10px;
+		font-size: 12px;
+	}
+	input[type="text"], input[type="email"], select {
+		padding: 6px;
+	}
 }
 /* Wide Mobile Layout: 480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) { 
@@ -622,5 +689,80 @@
 	    margin-left: 0;
 	    margin-top: 15px;
 	    display: block;
+	}
+	.user-icon {
+		float: left; 
+		margin: 0 244px;
+	}
+
+	.dropdown-user-info {
+		font-size: 14px;
+		width: 180px;
+		top: 100%;
+		right: 0;
+		padding: 5px 6px;
+	  }
+	
+	  .dropdown-user-info::after {
+		width: 40px;
+		height: 8px;
+		top: -6px;
+		right: 5px;
+	  }
+
+	  .dropdown-user-info-history-input-check {
+		margin: -5px;
+	  }
+
+	  .dropdown-user-info-logout i {
+		display:none !important;
+	  }
+
+	  .user-info__logout{
+		text-align: center !important;
+	  }
+
+	  .dropdown-user-info {
+		top: 32px;
+		right: -56px;
+	  }
+	  
+
+	  .history__link {
+		margin: 19px;
+	  }
+	  .dropdown-user-info-name {
+		font-size: 14px;
+	  }
+	
+	  .dropdown-user-info-history {
+		font-size: 12px;
+	  }
+	
+	  .dropdown-user-info-history-content h3 {
+		font-size: 18px;
+	  }
+	
+	  .dropdown-user-info-history-box {
+		padding: 8px;
+	  }
+	
+	  .user-info__logout {
+		font-size: 14px;
+		padding: 10px;
+	  }
+
+	  .container__user {
+		padding: 15px;
+	}
+	.header__user {
+		font-size: 14px;
+	}
+	.action-button__user {
+		padding: 5px 10px;
+		font-size: 12px;
+	}
+	input[type="text"], input[type="email"], select {
+		padding: 6px;
 	}
 }
