@@ -2939,7 +2939,7 @@ table.order-details tbody td {
 }
 
 .history__link {
-  color: red !important;
+  color: #000 !important;
 }
 
 .history__link:hover {
@@ -2948,6 +2948,10 @@ table.order-details tbody td {
 
 .user-info__logout {
   color: #000 !important;
+}
+
+.user-info__logout:hover {
+  color: #F28123!important;
 }
 
 .dropdown-user-info-logout {
