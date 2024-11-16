@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
+    <title>Xác Nhận Xóa Sản Phẩm</title>
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/img/logo.png" alt="Logo" class="sidebar-logo">
+        </div>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="user-management.html">Quản lý người dùng</a></li>
+            <li><a href="add-product.html">Thêm sản phẩm</a></li>
+            <li><a href="edit-product.html">Sửa sản phẩm</a></li>
+            <li><a href="delete-product.html" class="active">Xóa sản phẩm</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header class="dashboard-header">
+            <h1>Xác Nhận Xóa Sản Phẩm</h1>
+            <div class="profile-info">
+                <img src="../assets/img/avaters/avatar4.jpg" alt="Admin Avatar" class="profile-avatar">
+                <span class="profile-name">HuynhBinh</span>
+                <a href="login.html" class="logout-btn">Đăng Xuất</a>
+            </div>
+        </header>
+
+        <section class="confirmation">
+            <h2 class="confirmation-title">Bạn có chắc chắn muốn xóa sản phẩm này không?</h2>
+            <div class="product-info">
+                <p><strong>Tên sản phẩm:</strong> Táo xanh</p>
+                <p><strong>Giá:</strong> 45$</p>
+            </div>
+            <div class="confirmation-actions">
+                <!-- Khi click "Xóa", quay lại trang delete-product.html (sản phẩm bị xóa sẽ không có trong danh sách nữa) -->
+                <a href="delete-product.html?status=deleted" class="delete-btn">Xóa</a>
+                <!-- Link để hủy xóa, quay lại trang delete-product.html mà không thay đổi trạng thái -->
+                <a href="delete-product.html" class="cancel-btn">Hủy</a>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

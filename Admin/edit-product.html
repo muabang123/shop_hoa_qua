@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
+    <title>Sửa Sản Phẩm</title>
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/img/logo.png" alt="Logo" class="sidebar-logo">
+        </div>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="user-management.html">Quản lý người dùng</a></li>
+            <li><a href="add-product.html">Thêm sản phẩm</a></li>
+            <li><a href="edit-product.html">Sửa sản phẩm</a></li>
+            <li><a href="delete-product.html">Xóa sản phẩm</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header class="dashboard-header">
+            <h1>Sửa Sản Phẩm</h1>
+            <div class="profile-info">
+                <img src="../assets/img/avaters/avatar4.jpg" alt="Admin Avatar" class="profile-avatar">
+                <span class="profile-name">HuynhBinh</span>
+                <a href="login.html" class="logout-btn">Đăng Xuất</a>
+            </div>
+        </header>
+
+        <!-- Form sửa sản phẩm -->
+        <section class="form-section">
+            <form class="edit-product-form" action="submit_edit_product.php" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="product-name">Tên sản phẩm:</label>
+                    <input type="text" id="product-name" name="product-name" value="Apple" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-price">Giá sản phẩm ($):</label>
+                    <input type="number" id="product-price" name="product-price" value="45" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-description">Mô tả sản phẩm:</label>
+                    <textarea id="product-description" name="product-description" required>Sản phẩm tươi ngon</textarea>
+                </div>
+
+                <!-- Hiển thị hình ảnh hiện tại (nếu có) -->
+                <div class="form-group">
+                    <label for="product-image">Hình ảnh sản phẩm:</label>
+                    <div class="current-image">
+                        <img src="../assets/img/products/product-img-5.jpg" alt="Apple" class="product-image-preview">
+                        <br>
+                        <input type="checkbox" id="remove-image" name="remove-image" class="remove-image-checkbox">
+                        <span class="remove-image-text">Xóa hình ảnh</span>
+                    </div>
+                    <input type="file" id="product-image" name="product-image">
+                </div>
+                
+
+                <!-- Nút lưu thay đổi -->
+                <div class="form-group button-group">
+                    <button type="submit" class="submit-btn">Lưu Thay Đổi</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/admin.css"> <!-- Đường dẫn tới CSS -->
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/img/logo.png" alt="Logo" class="sidebar-logo">
+        </div>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="user-management.html">Quản Lý Người Dùng</a></li>
+            <li><a href="add-product.html">Thêm Sản Phẩm</a></li>
+            <li><a href="edit-product.html">Sửa Sản Phẩm</a></li>
+            <li><a href="delete-product.html">Xóa Sản Phẩm</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header class="dashboard-header">
+            <h1>Dashboard</h1>
+            <div class="profile-info">
+                <img src="../assets/img/avaters/avatar4.jpg" alt="Admin Avatar" class="profile-avatar">
+                <span class="profile-name">HuynhBinh</span>
+                <a href="login.html" class="logout-btn" onclick="logout()">Đăng Xuất</a> <!-- Đăng xuất bên cạnh Xin chào -->
+            </div>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Tổng Sản Phẩm</h3>
+                <p class="stat-number">6</p>
+            </div>
+            <div class="stat-card">
+                <h3>Tổng Người Dùng</h3>
+                <p class="stat-number">300</p>
+            </div>
+            <div class="stat-card">
+                <h3>Đơn Hàng Mới</h3>
+                <p class="stat-number">25</p>
+            </div>
+            <div class="stat-card">
+                <h3>Doanh Thu</h3>
+                <p class="stat-number">5.000.000 VND</p>
+            </div>
+        </section>
+
+        <section class="recent-activities">
+            <h2>Hoạt Động Gần Đây</h2>
+            <table class="activity-table">
+                <thead>
+                    <tr>
+                        <th>Thời Gian</th>
+                        <th>Hoạt Động</th>
+                        <th>Chi Tiết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01/11/2024</td>
+                        <td>Thêm Sản Phẩm</td>
+                        <td>Sản phẩm "Apple" đã được thêm vào cửa hàng.</td>
+                    </tr>
+                    <tr>
+                        <td>30/10/2024</td>
+                        <td>Đổi Mật Khẩu</td>
+                        <td>Quản trị viên đã đổi mật khẩu.</td>
+                    </tr>
+                    <tr>
+                        <td>29/10/2024</td>
+                        <td>Xóa Sản Phẩm</td>
+                        <td>Sản phẩm "Banana" đã bị xóa khỏi cửa hàng.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
+    <title>Đăng Nhập Admin</title>
+    <link rel="stylesheet" href="./css/login.css"> <!-- Link đến file CSS riêng cho trang login -->
+</head>
+
+<body>
+
+    <div class="login-container">
+        <div class="login-form">
+            <div class="logo-container">
+                <img src="../assets/img/logo.png" alt="Logo" class="login-logo">
+            </div>
+            <h2>Đăng Nhập Admin</h2>
+
+            <!-- Form đăng nhập -->
+            <form action="dashboard.html" method="POST">
+                <div class="input-group">
+                    <label for="username">Tài Khoản:</label>
+                    <!-- Điền sẵn tài khoản vào input -->
+                    <input type="text" id="username" name="username" value="HuynhBinh" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Mật Khẩu:</label>
+                    <!-- Mật khẩu không nên hiển thị ở đây, nhưng nếu bạn muốn thử nghiệm, có thể điền sẵn -->
+                    <input type="password" id="password" name="password" value="your_password_here" required>
+                </div>
+                <button type="submit" class="btn-login">Đăng Nhập</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
