@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Người Dùng</title>
+    <link rel="stylesheet" href="./css/admin.css"> <!-- Đường dẫn tới CSS -->
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/img/logo.png" alt="Logo" class="sidebar-logo">
+        </div>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="user-management.html" class="active">Quản Lý Người Dùng</a></li>
+            <li><a href="add-product.html">Thêm Sản Phẩm</a></li>
+            <li><a href="edit-product.html">Sửa Sản Phẩm</a></li>
+            <li><a href="delete-product.html">Xóa Sản Phẩm</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header class="dashboard-header">
+            <h1>Quản Lý Người Dùng</h1>
+            <div class="profile-info">
+                <img src="../assets/img/avaters/avatar4.jpg" alt="Admin Avatar" class="profile-avatar">
+                <span class="profile-name">HuynhBinh</span>
+                <a href="login.html" class="logout-btn">Đăng Xuất</a>
+            </div>
+        </header>
+
+        <section class="user-list">
+            <button class="add-user-btn" onclick="window.location.href='add-user.html'">Thêm Người Dùng</button>
+
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Tên Người Dùng</th>
+                        <th>Email</th>
+                        <th>Trạng Thái</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User 1 (Hoạt động) -->
+                    <tr>
+                        <td>Nguyễn Văn Thuận</td>
+                        <td>nguyenvanthuan@gmail.com</td>
+                        <td><button class="status-btn active">Hoạt Động</button></td>
+                        <td>
+                            <button class="edit-btn">Sửa</button>
+                            <button class="lock-btn">Khóa</button> <!-- Khóa -->
+                            <button class="delete-btn">Xóa</button>
+                        </td>
+                    </tr>
+
+                    <!-- User 2 (Bị khóa) -->
+                    <tr>
+                        <td>Trần Thị Mẫu</td>
+                        <td>mautran@gmail.com</td>
+                        <td><button class="status-btn blocked">Đã Khóa</button></td>
+                        <td>
+                            <button class="edit-btn">Sửa</button>
+                            <button class="unlock-btn">Mở Khóa</button> <!-- Mở khóa -->
+                            <button class="delete-btn">Xóa</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

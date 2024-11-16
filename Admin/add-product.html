@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Sản Phẩm</title>
+    <link rel="stylesheet" href="./css/admin.css"> <!-- Đường dẫn tới CSS -->
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/img/logo.png" alt="Logo" class="sidebar-logo">
+        </div>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="user-management.html">Quản Lý Người Dùng</a></li>
+            <li><a href="add-product.html" class="active">Thêm Sản Phẩm</a></li>
+            <li><a href="edit-product.html">Sửa Sản Phẩm</a></li>
+            <li><a href="delete-product.html">Xóa Sản Phẩm</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header class="dashboard-header">
+            <h1>Thêm Sản Phẩm Mới</h1>
+            <div class="profile-info">
+                <img src="../assets/img/avaters/avatar4.jpg" alt="Admin Avatar" class="profile-avatar">
+                <span class="profile-name">HuynhBinh</span>
+                <a href="login.html" class="logout-btn">Đăng Xuất</a>
+            </div>
+        </header>
+
+        <section class="add-product-form">
+            <form action="" method="POST" enctype="multipart/form-data">
+                <label for="product-name">Tên Sản Phẩm</label>
+                <input type="text" id="product-name" name="product-name" required>
+
+                <label for="product-description">Mô Tả</label>
+                <textarea id="product-description" name="product-description" rows="5" required></textarea>
+
+                <label for="product-price">Giá</label>
+                <input type="number" id="product-price" name="product-price" required>
+
+                <label for="product-image">Hình Ảnh</label>
+                <input type="file" id="product-image" name="product-image" accept="image/*" required>
+
+                <button type="submit" class="submit-btn">Thêm Sản Phẩm</button>
+            </form>
+        </section>
+    </div>
+
+</body>
+
+</html>

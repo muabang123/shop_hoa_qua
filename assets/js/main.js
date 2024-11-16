@@ -199,6 +199,13 @@
             });
         });
 
+        const submitButton = document.querySelector('.btn-submit');
+
+        submitButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            alert('Đặt hàng thành công! Cảm ơn bạn.');
+        });
+
 
     });
 

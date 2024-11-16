@@ -163,14 +163,15 @@
 	</div>
 	<!-- kết thúc khu vực tìm kiếm -->
 
+
 	<!-- khu vực breadcrumb -->
 	<div class="breadcrumb-section breadcrumb-bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
-						<p>Xem Thêm Chi Tiết</p>
-						<h1>Sản Phẩm Đơn</h1>
+						<p>Lịch sử mua hàng</p>
+						<h1>Sản Phẩm Đã Mua</h1>
 					</div>
 				</div>
 			</div>
@@ -178,92 +179,50 @@
 	</div>
 	<!-- kết thúc khu vực breadcrumb -->
 
-	<!-- sản phẩm đơn -->
-	<div class="single-product mt-150 mb-150">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-5">
-					<div class="single-product-img">
-						<img src="./assets/img/products/product-img-5.jpg" alt="">
-					</div>
-				</div>
-				<div class="col-md-7">
-					<div class="single-product-content">
-						<h3>Táo Xanh có polyphenols</h3>
-						<p class="single-product-pricing"><span>Giá mỗi Kg</span> $45</p>
-						<p>Khám phá hương vị tuyệt vời của táo nhập khẩu từ Việt Nam! Những trái táo tươi ngon, giòn tan
-							và đầy màu sắc được chọn lựa kỹ càng từ những vườn táo tốt nhất. Hãy thưởng thức sự ngọt
-							ngào và bổ dưỡng mà trái táo mang lại cho sức khỏe của bạn. Đặt hàng ngay hôm nay để trải
-							nghiệm sự khác biệt!</p>
-						<div class="single-product-form">
-							<form action="index.html">
-								<input type="number" placeholder="0">
-							</form>
-							<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ
-								Hàng</a>
-							<p><strong>Danh Mục: </strong>Trái Cây, Hữu Cơ</p>
-						</div>
-						<h4>Chia Sẻ:</h4>
-						<ul class="product-share">
-							<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href=""><i class="fab fa-twitter"></i></a></li>
-							<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
-							<li><a href=""><i class="fab fa-linkedin"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- kết thúc sản phẩm đơn -->
+	<div class="__history-first-container">
+        <div class="__history-first-header">
+            <label for="search-order" class="__history-first-label">Tìm kiếm đơn hàng:</label>
+            <input type="text" id="search-order" class="__history-first-input">
+            <button class="__history-first-button">Tìm kiếm</button>
+        </div>
 
-	<!-- sản phẩm liên quan -->
-	<div class="more-products mb-150">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="section-title">
-						<h3><span class="orange-text">Sản Phẩm</span> Liên Quan</h3>
-						<p>Khám phá những sản phẩm tươi ngon khác mà bạn sẽ yêu thích! Tất cả đều được chọn lọc kỹ lưỡng
-							để đảm bảo chất lượng và hương vị tốt nhất.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-6 text-center">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href="product_1.html"><img src="./assets/img/products/product-img-1.jpg" alt=""></a>
-						</div>
-						<h3>Dâu Tây</h3>
-						<p class="product-price"><span>Giá mỗi Kg</span> 85$ </p>
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 text-center">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href="product_2.html"><img src="./assets/img/products/product-img-2.jpg" alt=""></a>
-						</div>
-						<h3>Quả Nho</h3>
-						<p class="product-price"><span>Giá mỗi Kg</span> 70$ </p>
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3 text-center">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href="product_3.html"><img src="./assets/img/products/product-img-3.jpg" alt=""></a>
-						</div>
-						<h3>Chanh</h3>
-						<p class="product-price"><span>Giá mỗi Kg</span> 35$ </p>
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- kết thúc sản phẩm liên quan -->
+        <table class="__history-first-table">
+            <thead>
+                <tr>
+                    <th class="__history-first-header-cell">Mã đơn hàng</th>
+                    <th class="__history-first-header-cell">Ngày đặt hàng</th>
+                    <th class="__history-first-header-cell">Tình trạng giao hàng</th>
+                    <th class="__history-first-header-cell">Ngày giao hàng</th>
+                    <th class="__history-first-header-cell">Xem chi tiết</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="__history-first-cell">234BH54R435TYT90</td>
+                    <td class="__history-first-cell">08-08-2024</td>
+                    <td class="__history-first-cell">Đang giao</td>
+                    <td class="__history-first-cell">...</td>
+                    <td class="__history-first-cell"><a href="history_pending.html" class="__history-first-link">View</a></td>
+                </tr>
+                <tr>
+                    <td class="__history-first-cell">234BH54R435TYT90</td>
+                    <td class="__history-first-cell">08-08-2024</td>
+                    <td class="__history-first-cell">Đã giao</td>
+                    <td class="__history-first-cell">15-08-2024</td>
+                    <td class="__history-first-cell"><a href="history.html" class="__history-first-link">View</a></td>
+                </tr>
+                <tr>
+                    <td class="__history-first-cell">DCF312416</td>
+                    <td class="__history-first-cell">2024-09-09</td>
+                    <td class="__history-first-cell">Đã hủy giao hàng</td>
+                    <td class="__history-first-cell">X</td>
+                    <td class="__history-first-cell"><a href="history_cancel.html" class="__history-first-link">View</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
 
 
 	<!-- logo carousel -->
