@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin Panel - Fruitkha</title>
+
+	<!-- Các file CSS -->
+	<link rel="stylesheet" href="./assets/css/all.min.css">
+	<link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="./assets/css/meanmenu.min.css">
+	<link rel="stylesheet" href="./assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="./assets/css/animate.css">
+	<link rel="stylesheet" href="./assets/css/main.css">
+	<link rel="stylesheet" href="./assets/css/responsive.css">
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+	<!-- Header -->
+	<header class="top-header-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<div class="site-logo">
+						<a href="admin_dashboard.html">
+							<img src="./assets/img/logo.png" alt="Fruitkha Admin Logo">
+						</a>
+					</div>
+					<nav class="main-menu">
+						<ul>
+							<li><a href="admin_dashboard.html">Dashboard</a></li>
+							<li><a href="#user-management">Quản lý người dùng</a></li>
+							<li><a href="#add-product">Thêm sản phẩm</a></li>
+							<li><a href="#edit-product">Sửa sản phẩm</a></li>
+							<li><a href="#delete-product">Xóa sản phẩm</a></li>
+							<li><span>Xin chào, Admin!</span></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Sidebar -->
+	<aside class="admin-sidebar">
+		<h4>Danh mục chức năng</h4>
+		<ul>
+			<li><a href="#user-management">Quản lý người dùng</a></li>
+			<li><a href="#add-product">Thêm sản phẩm</a></li>
+			<li><a href="#edit-product">Sửa sản phẩm</a></li>
+			<li><a href="#delete-product">Xóa sản phẩm</a></li>
+		</ul>
+	</aside>
+
+	<!-- Main content -->
+	<main class="admin-content">
+		<!-- Quản lý người dùng -->
+		<section id="user-management" class="admin-section">
+			<h2>Quản lý người dùng</h2>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Tên</th>
+						<th>Email</th>
+						<th>Trạng thái</th>
+						<th>Hành động</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Nguyễn Văn A</td>
+						<td>a@gmail.com</td>
+						<td><span class="badge badge-success">Hoạt động</span></td>
+						<td><button class="btn btn-warning">Khóa</button></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Trần Thị B</td>
+						<td>b@gmail.com</td>
+						<td><span class="badge badge-danger">Bị khóa</span></td>
+						<td><button class="btn btn-success">Mở khóa</button></td>
+					</tr>
+				</tbody>
+			</table>
+			<button class="btn btn-primary">Thêm người dùng</button>
+		</section>
+
+		<!-- Thêm sản phẩm -->
+		<section id="add-product" class="admin-section">
+			<h2>Thêm sản phẩm</h2>
+			<form>
+				<div class="form-group">
+					<label for="product-name">Tên sản phẩm</label>
+					<input type="text" class="form-control" id="product-name" placeholder="Nhập tên sản phẩm">
+				</div>
+				<div class="form-group">
+					<label for="product-price">Giá</label>
+					<input type="number" class="form-control" id="product-price" placeholder="Nhập giá sản phẩm">
+				</div>
+				<div class="form-group">
+					<label for="product-image">Hình ảnh</label>
+					<input type="file" class="form-control" id="product-image">
+				</div>
+				<button type="submit" class="btn btn-success">Thêm sản phẩm</button>
+			</form>
+		</section>
+
+		<!-- Sửa sản phẩm -->
+		<section id="edit-product" class="admin-section">
+			<h2>Sửa sản phẩm</h2>
+			<form>
+				<div class="form-group">
+					<label for="edit-product-name">Tên sản phẩm</label>
+					<input type="text" class="form-control" id="edit-product-name" value="Trái Cây Tươi">
+				</div>
+				<div class="form-group">
+					<label for="edit-product-price">Giá</label>
+					<input type="number" class="form-control" id="edit-product-price" value="100.000đ">
+				</div>
+				<div class="form-group">
+					<label for="edit-product-image">Chọn hình ảnh</label>
+					<input type="file" class="form-control" id="edit-product-image">
+				</div>
+				<button type="submit" class="btn btn-warning">Cập nhật sản phẩm</button>
+			</form>
+		</section>
+
+		<!-- Xóa sản phẩm -->
+		<section id="delete-product" class="admin-section">
+			<h2>Xóa sản phẩm</h2>
+			<p>Bạn có chắc chắn muốn xóa sản phẩm này không?</p>
+			<button class="btn btn-danger">Xóa</button>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer class="footer-area">
+		<div class="container text-center">
+			<p>&copy; 2024 Fruitkha - Tất cả quyền được bảo lưu</p>
+		</div>
+	</footer>
+
+	<!-- Các tệp JS -->
+	<script src="./assets/js/jquery-1.11.3.min.js"></script>
+	<script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/js/owl.carousel.min.js"></script>
+	<script src="./assets/js/meanmenu.min.js"></script>
+	<script src="./assets/js/magnific-popup.min.js"></script>
+	<script src="./assets/js/animate.min.js"></script>
+</body>
+
+</html>
