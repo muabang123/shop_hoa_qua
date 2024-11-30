@@ -119,7 +119,7 @@
 												<div class="dropdown-user-info-history">
 													<label for="dropdown-user-info-history-input"
 														class="dropdown-user-info-history-input-check"><a
-															href="history.html" class="history__link">Xem lại lịch
+															href="check_history.html" class="history__link">Xem lại lịch
 															sử đã mua</a></label>
 													<input type="checkbox" id="dropdown-user-info-history-input">
 												</div>
@@ -164,19 +164,52 @@
 	<!-- kết thúc khu vực tìm kiếm -->
 
 	<!-- khu vực breadcrumb -->
-	<div class="breadcrumb-section breadcrumb-bg">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="breadcrumb-text">
-						<p>Tươi và Hữu cơ</p>
-						<h1>Cửa Hàng</h1>
-					</div>
-				</div>
-			</div>
-		</div>
+	<div class="breadcrumb-section__shop breadcrumb-bg">
+
 	</div>
 	<!-- kết thúc khu vực breadcrumb -->
+
+	<div class="search-bar-container__advance-search">
+		<label for="category" class="search-bar-label__advance-search">Phân loại:</label>
+		<select id="category" class="search-bar-select__advance-search">
+			<option value="all">Tất cả</option>
+			<option value="category1">Dâu tây</option>
+			<option value="category2">Quả Nho</option>
+			<option value="category3">Quả Chanh</option>
+		</select>
+
+		<label for="price-min" class="search-bar-label__advance-search search-bar-label__advance-search_test ">Giá thấp
+			nhất:</label>
+		<input type="number" id="price-min" class="price-input__advance-search" min="0" max="200" value="0" step="1">
+
+		<label for="price-max" class="search-bar-label__advance-search">Giá cao nhất:</label>
+		<input type="number" id="price-max" class="price-input__advance-search" min="0" max="200" value="200" step="1">
+
+		<span id="price-range-display" class="price-display__advance-search">0$ - 200$</span>
+
+		<label for="search-keyword" class="search-bar-label__advance-search">Tìm kiếm từ khóa:</label>
+		<input type="text" id="search-keyword" class="text-input__advance-search" placeholder="Nhập từ khóa...">
+
+		<a href="search.html" class="search-bar-button__advance-search">Tìm kiếm</a>
+	</div>
+
+	<script>
+		// Lấy các phần tử nhập giá trị và phần hiển thị khoảng giá
+		const priceMinInput = document.getElementById('price-min');
+		const priceMaxInput = document.getElementById('price-max');
+		const priceRangeDisplay = document.getElementById('price-range-display');
+
+		// Hàm cập nhật hiển thị khoảng giá
+		function updatePriceDisplay() {
+			const minPrice = parseInt(priceMinInput.value, 10) || 0;
+			const maxPrice = parseInt(priceMaxInput.value, 10) || 200;
+			priceRangeDisplay.textContent = `${minPrice}$ - ${maxPrice}$`;
+		}
+
+		// Lắng nghe sự kiện thay đổi trên các ô nhập
+		priceMinInput.addEventListener('input', updatePriceDisplay);
+		priceMaxInput.addEventListener('input', updatePriceDisplay);
+	</script>
 
 	<!-- sản phẩm -->
 	<div class="product-section mt-150 mb-150">

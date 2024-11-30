@@ -503,6 +503,27 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
   padding-top: 200px;
 }
 
+.breadcrumb-section__shop {
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 1;
+  background-attachment: fixed;
+  padding-top: 100px;
+}
+
+.breadcrumb-section__shop::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  content: "";
+  background-color: #07212e;
+  z-index: -1;
+  opacity: 0.8;
+}
+
 .breadcrumb-section:after {
   position: absolute;
   left: 0;
@@ -3516,6 +3537,13 @@ input[type="radio"] {
   border: 1px solid #ccc;
 }
 
+.__history-first-cell-total {
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: solid;
+}
+
 .__history-first-link {
   color: blue;
   text-decoration: underline;
@@ -3525,7 +3553,7 @@ input[type="radio"] {
 
 .search-bar-container__advance-search {
   display: flex;
-  flex-wrap: wrap; /* Cho phép các phần tử xuống dòng nếu không đủ chỗ */
+  /* flex-wrap: wrap; Cho phép các phần tử xuống dòng nếu không đủ chỗ */
   gap: 10px;
   padding: 15px;
   background-color: #f2ece4;
@@ -3536,13 +3564,20 @@ input[type="radio"] {
 }
 
 .search-bar-label__advance-search {
+  width: 100%;
+  padding: 8px;
   font-size: 14px;
   font-weight: bold;
   flex: 1 1 100%; /* Chiếm 100% chiều rộng khi cần */
 }
 
+.search-bar-label__advance-search_test {
+  margin: 0 0 0 100px;
+}
+
 .search-bar-select__advance-search,
 .price-input__advance-search {
+  height: 50px;
   width: 100%; /* Chiếm toàn bộ chiều rộng */
   padding: 8px;
   font-size: 14px;
@@ -3550,13 +3585,19 @@ input[type="radio"] {
   border: 1px solid #ccc;
 }
 
+.search-bar-select__advance-search {
+  margin: 0 0 0 -100px;
+}
+
 .price-display__advance-search {
+  line-height: 50px;
   font-size: 14px;
   font-weight: bold;
   flex: 1 1 100%; /* Chiếm toàn bộ chiều rộng khi cần */
 }
 
 .search-bar-button__advance-search {
+  height: 50px;
   width: 100%; /* Nút chiếm toàn bộ chiều rộng */
   padding: 10px;
   background-color: #F28123;
@@ -3572,6 +3613,7 @@ input[type="radio"] {
 }
 
 .text-input__advance-search {
+  height: 50px;
 	width: 100%; /* Chiếm toàn bộ chiều rộng */
 	padding: 8px;
 	font-size: 14px;

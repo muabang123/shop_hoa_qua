@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
+    <title>Thêm Sản Phẩm</title>
+    <link rel="stylesheet" href="./css/admin.css"> <!-- Đường dẫn tới CSS -->
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/img/logo.png" alt="Logo" class="sidebar-logo">
+        </div>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="user-management.html">Quản Lý Người Dùng</a></li>
+            <li><a href="QuanLyDonHang.html" class="active">Quản Lý Đơn Hàng </a></li>
+            <li><a href="add-product.html" class="active">Thêm Sản Phẩm</a></li>
+            <li><a href="edit-product.html">Sửa Sản Phẩm</a></li>
+            <li><a href="delete-product.html">Xóa Sản Phẩm</a></li>
+            <li><a href="statistics.html" class="sidebar-item active">Thống Kê Kinh Doanh</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header class="dashboard-header">
+            <h1>QUẢN LÝ ĐƠN HÀNG</h1>
+            <div class="profile-info">
+                <img src="../assets/img/avaters/avatar4.jpg" alt="Admin Avatar"
+                    class="profile-avatar">
+                <span class="profile-name">BinhHuynh</span>
+                <a href="login.html" class="logout-btn">Đăng Xuất</a>
+            </div>
+        </header>
+
+        <section class="add-product-form">
+            <form action="" method="POST" enctype="multipart/form-data">
+                <label for="date-start">Từ ngày:</label>
+                <input type="date" id="date-start">
+
+                <label for="date-end">Đến ngày:</label>
+                <input type="date" id="date-end">
+
+                <label for="district-filter">Quận:</label>
+                <select id="district-filter">
+                    <option value="all">Tất cả</option>
+                    <option value="district1">Quận 1</option>
+                    <option value="district3">Quận 3</option>
+                    <option value="district4">Quận 4</option>
+                    <option value="district5">Quận 5</option>
+                    <option value="district10">Quận 10</option>
+                    <option value="district11">Quận 11</option>
+                    <option value="PhuNhuan_district">Quận Phú Nhuận</option>
+                    <option value="BinhThanh_district">Quận Bình Thạnh</option>
+                    <option value="TanBinh_district3">Quận Tân Bình</option>
+                    <option value="ThuDuc_city">Thành Phố Thử Đức</option>
+                    <!-- Thêm các quận khác -->
+                </select>
+
+                <label for="status-filter">Trạng thái:</label>
+                <select id="status-filter">
+                    <option value="all">Tất cả</option>
+                    <option value="new">Chưa xử lý</option>
+                    <option value="confirmed">Đã xác nhận</option>
+                    <option value="delivered">Đã giao thành công</option>
+                    <option value="cancelled">Đã hủy</option>
+                </select>
+
+                <button type="submit" class="submit-btn" href="login.html" class="logout-btn">Áp Dụng</button>
+            </form>
+        </section>
+        <section class="order-list">
+            <h2>Danh Sách Đơn Hàng</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã Đơn Hàng</th>
+                        <th>Khách Hàng</th>
+                        <th>Địa Chỉ</th>
+                        <th>Thời Gian</th>
+                        <th>Tình Trạng</th>
+                        <th>Chi Tiết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DH001</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>Quận 1</td>
+                        <td>2024-11-29</td>
+                        <td>Chưa xử lý</td>
+                        <td><a href="ChiTiet1.html">Xem Chi Tiết</a></td>
+                    </tr>
+                    <tr>
+                        <td>DH002</td>
+                        <td>Trần Thị B</td>
+                        <td>Quận 3</td>
+                        <td>2024-11-28</td>
+                        <td>Đã giao thành công</td>
+                        <td><a href="chitiet2.html">Xem Chi Tiết</a></td>
+                    </tr>
+                    <!-- Thêm các đơn hàng khác -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+</body>
+
+</html>     
