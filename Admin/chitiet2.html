@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
+    <title>Thêm Sản Phẩm</title>
+    <link rel="stylesheet" href="./css/admin.css"> <!-- Đường dẫn tới CSS -->
+    <style>
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/img/logo.png" alt="Logo" class="sidebar-logo">
+        </div>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="user-management.html">Quản Lý Người Dùng</a></li>
+            <li><a href="QuanLyDonHang.html" class="active">Quản Lý Đơn Hàng </a></li>
+            <li><a href="add-product.html" class="active">Thêm Sản Phẩm</a></li>
+            <li><a href="edit-product.html">Sửa Sản Phẩm</a></li>
+            <li><a href="delete-product.html">Xóa Sản Phẩm</a></li>
+            <li><a href="statistics.html" class="sidebar-item active">Thống Kê Kinh Doanh</a></li>
+        </ul>
+    </aside>
+
+
+    <div class="content">
+        <header class="dashboard-header">
+            <h1>Quản Lý Đơn Hàng</h1>
+            <div class="profile-info">
+                <img src="D:\HK1-24-25\WEB AND APPS\Do-An\assets\img\avaters\avatar2.jpg.url" alt="Admin Avatar"
+                    class="profile-avatar">
+                <span class="profile-name">LieBap</span>
+                <a href="login.html" class="logout-btn">Đăng Xuất</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <section class="order-list">
+            <h2>Chi Tiết Đơn Hàng</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã Đơn Hàng</th>
+                        <th>Khách Hàng</th>
+                        <th>Địa Chỉ</th>
+                        <th>Thời Gian Đặt</th>
+                        <th>Tình Trạng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DH002</td>
+                        <td>Trần Thị B</td>
+                        <td>Quận 3</td>
+                        <td>2024-11-28</td>
+                        <td>
+                            <select id="status-filter">
+                                <option value="all">Tất cả</option>
+                                <option value="new">Chưa xử lý</option>
+                                <option value="confirmed">Đã xác nhận</option>
+                                <option value="delivered">Đã giao thành công</option>
+                                <option value="cancelled">Đã hủy</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- Thêm các đơn hàng khác -->
+                </tbody>
+            </table>
+        </section>
+        <section class="order-list">
+            <label for="startDate">Sản Phẩm : Kiwi</label>
+            <label for="startDate"><br>Số lượng : 7</label>
+            <label for="startDate"><br>Đơn giá : 50$</label>
+            <label for="startDate"><br>Thành Tiền : 350$</label>
+
+            </form>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
