@@ -614,3 +614,230 @@ table th {
     border: 1px solid #ddd;
     border-radius: 8px;
 }
+
+/* CSS cho modal */
+.modal-toggle {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.modal-toggle:checked + .modal {
+    visibility: visible;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+}
+
+button, label {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    margin-right: 10px;
+    padding: 10px 20px; /* Thêm padding để nút đẹp hơn */
+    border-radius: 8px; /* Bo góc */
+    cursor: pointer; /* Hiển thị con trỏ chuột dạng tay khi hover */
+}
+
+.cancel-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Thêm padding để nút đẹp hơn */
+    border-radius: 8px; /* Bo góc */
+    cursor: pointer; /* Hiển thị con trỏ chuột dạng tay khi hover */
+}
+
+
+/* Cách ẩn/hiện các button */
+label {
+    cursor: pointer;
+}
+
+.lock-btn, .unlock-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+.add-user-form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.add-user-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.add-user-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.add-user-form input,
+.add-user-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-user-form .submit-btn {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-user-form .submit-btn:hover {
+    background-color: darkgreen;
+}
+
+/* Cấu trúc lưới cho danh sách sản phẩm */
+/* Cấu trúc sản phẩm sử dụng Flexbox để căn giữa */
+.product-management {
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa các ô sản phẩm theo chiều ngang */
+    align-items: center; /* Căn giữa các ô sản phẩm theo chiều dọc */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    margin-top: 20px; /* Khoảng cách từ phần tiêu đề tới sản phẩm */
+    flex-wrap: wrap; /* Cho phép các sản phẩm xếp xuống dòng nếu không đủ chỗ */
+}
+
+/* Mỗi ô sản phẩm */
+.product-item {
+    text-align: center; /* Căn giữa văn bản trong sản phẩm */
+    border: 1px solid #ddd; /* Viền nhẹ cho sản phẩm */
+    padding: 20px; /* Khoảng cách trong ô sản phẩm */
+    border-radius: 8px; /* Bo tròn góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho sản phẩm */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa các phần tử trong ô sản phẩm */
+    justify-content: space-between; /* Chia đều các phần tử trong ô sản phẩm */
+    height: 300px; /* Chiều cao cố định cho các ô sản phẩm */
+    background-color: #fff; /* Nền sáng cho sản phẩm */
+    transition: transform 0.3s ease; /* Thêm hiệu ứng hover */
+}
+
+/* Chỉnh sửa ảnh sản phẩm */
+.product-img {
+    width: 100%; /* Chiều rộng ảnh bằng chiều rộng của ô sản phẩm */
+    height: 150px; /* Chiều cao cố định cho ảnh */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 8px; /* Bo tròn ảnh */
+    margin-bottom: 15px; /* Khoảng cách giữa ảnh và tên sản phẩm */
+}
+
+/* Thêm hiệu ứng hover cho sản phẩm */
+.product-item:hover {
+    transform: translateY(-5px); /* Hiệu ứng nâng cao khi rê chuột */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Làm bóng đậm hơn khi hover */
+}
+
+
+/* Chỉnh sửa các nút action (sửa/xóa) */
+.product-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: auto; /* Đẩy các nút xuống dưới */
+}
+
+.action-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer; /* Thêm hiệu ứng khi rê chuột vào icon */
+}
+
+.pagination{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.pagination a{
+	text-decoration: none;
+	padding: 10px 13px;
+	margin: 2px;
+	color: black;
+	/*not reset display att for anchor here, anchor will stack on the div block above*/
+	display: inline-block; 
+	border: 2px solid transparent;  
+}
+
+.pagination a.active{
+	background-color: #333;
+	color: white;
+	border-radius: 4px;
+
+}
+
+.pagination a:hover:not(.active){
+	border-radius: 4px;
+	border: 2px solid #333;
+}
+
+/* Thanh tìm kiếm */
+.search-bar {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.search-bar input {
+    padding: 8px;
+    font-size: 14px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #45a049;
+}

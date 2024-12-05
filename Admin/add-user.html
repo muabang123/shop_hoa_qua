@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Người Dùng</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/admin.css"> <!-- Đường dẫn tới CSS -->
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/img/logo.png" alt="Logo" class="sidebar-logo">
+        </div>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="user-management.html" class="active">Quản Lý Người Dùng</a></li>
+            <li><a href="product-managerment-p1.html">Quản Lý Sản Phẩm</a></li>
+            <li><a href="QuanLyDonHang.html">Quản Lý Đơn Hàng</a></li>
+            <li><a href="add-product.html">Thêm Sản Phẩm</a></li>
+            <li><a href="statistics.html">Thống Kê Kinh Doanh</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header class="dashboard-header">
+            <h1>Thêm Người Dùng</h1>
+            <div class="profile-info">
+                <img src="../assets/img/avaters/avatar4.jpg" alt="Admin Avatar" class="profile-avatar">
+                <span class="profile-name">HuynhBinh</span>
+                <a href="login.html" class="logout-btn">Đăng Xuất</a>
+            </div>
+        </header>
+
+        <section class="add-user-form">
+            <h2>Thông Tin Người Dùng</h2>
+            <form action="#" method="post">
+                <label for="full-name">Họ và Tên:</label>
+                <input type="text" id="full-name" name="full-name" required placeholder="Nhập họ và tên">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Nhập email">
+
+                <label for="phone">Số Điện Thoại:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Nhập số điện thoại">
+
+                <label for="address">Địa Chỉ Giao Hàng:</label>
+                <input type="text" id="address" name="address" required placeholder="Nhập địa chỉ giao hàng">
+
+                
+
+                <button type="button" class="submit-btn" onclick="window.location.href='user-management.html'">Thêm Người Dùng</button>
+
+            </form>
+        </section>
+    </div>
+
+</body>
+
+</html>

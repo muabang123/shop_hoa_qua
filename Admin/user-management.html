@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản Lý Người Dùng</title>
-    <link rel="stylesheet" href="./css/admin.css"> <!-- Đường dẫn tới CSS -->
-</head>
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/admin.css"> <!-- Đường dẫn tới CSS --></head>
 
 <body>
 
@@ -20,11 +20,10 @@
         <ul>
             <li><a href="dashboard.html">Dashboard</a></li>
             <li><a href="user-management.html" class="active">Quản Lý Người Dùng</a></li>
-            <li><a href="QuanLyDonHang.html" class="active">Quản Lý Đơn Hàng </a></li>
+            <li><a href="product-managerment-p1.html">Quản Lý Sản Phẩm</a></li>
+            <li><a href="QuanLyDonHang.html">Quản Lý Đơn Hàng </a></li>
             <li><a href="add-product.html">Thêm Sản Phẩm</a></li>
-            <li><a href="edit-product.html">Sửa Sản Phẩm</a></li>
-            <li><a href="delete-product.html">Xóa Sản Phẩm</a></li>
-            <li><a href="statistics.html" class="sidebar-item active">Thống Kê Kinh Doanh</a></li>
+            <li><a href="statistics.html" >Thống Kê Kinh Doanh</a></li>
         </ul>
     </aside>
 
@@ -58,9 +57,7 @@
                         <td>nguyenvanthuan@gmail.com</td>
                         <td><button class="status-btn active">Hoạt Động</button></td>
                         <td>
-                            <button class="edit-btn">Sửa</button>
-                            <button class="lock-btn">Khóa</button> <!-- Khóa -->
-                            <button class="delete-btn">Xóa</button>
+                            <label for="confirm-lock-1" class="lock-btn">Khóa</label> <!-- Khóa -->
                         </td>
                     </tr>
 
@@ -70,15 +67,32 @@
                         <td>mautran@gmail.com</td>
                         <td><button class="status-btn blocked">Đã Khóa</button></td>
                         <td>
-                            <button class="edit-btn">Sửa</button>
-                            <button class="unlock-btn">Mở Khóa</button> <!-- Mở khóa -->
-                            <button class="delete-btn">Xóa</button>
+                            <label for="confirm-lock-2" class="unlock-btn">Mở Khóa</label> <!-- Mở khóa -->
                         </td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
+    </div>
+
+    <!-- Modal Confirm Lock -->
+    <input type="checkbox" id="confirm-lock-1" class="modal-toggle">
+    <div class="modal">
+        <div class="modal-content">
+            <h3>Bạn có chắc chắn muốn khóa người dùng này?</h3>
+            <label for="confirm-lock-1" class="confirm-btn">Xác Nhận</label>
+            <label for="confirm-lock-1" class="cancel-btn">Hủy Bỏ</label>
+        </div>
+    </div>
+
+    <input type="checkbox" id="confirm-lock-2" class="modal-toggle">
+    <div class="modal">
+        <div class="modal-content">
+            <h3>Bạn có chắc chắn muốn mở khóa người dùng này?</h3>
+            <label for="confirm-lock-2" class="confirm-btn">Xác Nhận</label>
+            <label for="confirm-lock-2" class="cancel-btn">Hủy Bỏ</label>
+        </div>
     </div>
 
 </body>

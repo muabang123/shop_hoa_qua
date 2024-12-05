@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
+    <title>Quản Lý Sản Phẩm</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/admin.css"> <!-- Đường dẫn tới CSS -->
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/img/logo.png" alt="Logo" class="sidebar-logo">
+        </div>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="user-management.html">Quản Lý Người Dùng</a></li>
+            <li><a href="product-managerment-p1.html" class="active">Quản Lý Sản Phẩm</a></li>
+            <li><a href="QuanLyDonHang.html">Quản Lý Đơn Hàng</a></li>
+            <li><a href="add-product.html">Thêm Sản Phẩm</a></li>
+            <li><a href="statistics.html">Thống Kê Kinh Doanh</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header class="dashboard-header">
+            <h1>Quản Lý Sản Phẩm - Trang 1</h1>
+            <div class="profile-info">
+                <img src="../assets/img/avaters/avatar4.jpg" alt="Admin Avatar" class="profile-avatar">
+                <span class="profile-name">HuynhBinh</span>
+                <a href="login.html" class="logout-btn" onclick="logout()">Đăng Xuất</a>
+            </div>
+        </header>
+
+        <!-- Thanh tìm kiếm -->
+        <div class="search-bar">
+            <form action="search.html" method="GET">
+                <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." />
+                <button type="submit">Tìm</button>
+            </form>
+        </div>
+
+        <!-- Product Management Section -->
+        <section class="product-management">
+            <div class="product-item">
+                <img src="..\assets\img\products\product-img-2.jpg" alt="Nho" class="product-img"> <!-- Hình ảnh của nho -->
+                <h3>Nho</h3>
+                <div class="product-actions">
+                    <a href="edit-product.html"><img src="../assets/img/edit.png" alt="Chỉnh Sửa" class="action-icon"></a>
+                    <a href="confirm-delete-product.html"><img src="../assets/img/delete.png" alt="Xóa" class="action-icon"></a>
+                </div>
+            </div>
+
+        </section>
+
+        
+
+    </div>
+
+</body>
+
+
+</html>
