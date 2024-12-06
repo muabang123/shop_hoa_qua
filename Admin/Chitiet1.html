@@ -41,46 +41,30 @@
         </header>
 
         <!-- Main Content -->
-        <section class="order-list">
-            <h2>Chi Tiết Đơn Hàng</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Mã Đơn Hàng</th>
-                        <th>Khách Hàng</th>
-                        <th>Địa Chỉ</th>
-                        <th>Thời Gian Đặt</th>
-                        <th>Tình Trạng</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>DH001</td>
-                        <td>Nguyễn Văn A</td>
-                        <td>Quận 1</td>
-                        <td>2024-11-29</td>
-                        <td>
-                            <select id="status-filter">
-                                <option value="all">Tất cả</option>
-                                <option value="new">Chưa xử lý</option>
-                                <option value="confirmed">Đã xác nhận</option>
-                                <option value="delivered">Đã giao thành công</option>
-                                <option value="cancelled">Đã hủy</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <!-- Thêm các đơn hàng khác -->
-                </tbody>
-            </table>
-        </section>
-        <section class="order-list">
-            <label for="startDate">Sản Phẩm : Nho</label>
-            <label for="startDate"><br>Số lượng : 3</label>
-            <label for="startDate"><br>Đơn giá : 50$</label>
-            <label for="startDate"><br>Thành Tiền : 150$</label>
-
+        <section class="add-product-form_2">
+            <form action="" method="POST" enctype="multipart/form-data">
+                <h2>Chi Tiết Đơn Hàng</h2>
+                <label for="startDate">Mã đơn hàng : DH001</label><br>
+                <label for="startDate">Khách hàng : Nguyễn Văn A</label><br>
+                <label for="startDate">Tình trạng : <td>
+                        <select id="status-filter">
+                            <option value="all">Tất cả</option>
+                            <option value="new">Chưa xử lý</option>
+                            <option value="confirmed">Đã xác nhận</option>
+                            <option value="delivered">Đã giao thành công</option>
+                            <option value="cancelled">Đã hủy</option>
+                        </select>
+                        <button>Lưu</button>
+                    </td></label><br>
+                <label for="startDate">Sản Phẩm : Nho</label>
+                <label for="startDate"><br>Số lượng : 3</label>
+                <label for="startDate"><br>Địa chỉ : Quận 1</label>
+                <label for="startDate"><br>Thời gian đặt : 2024-11-29</label>
+                <label for="startDate"><br>Đơn giá : 50$</label>
+                <label for="startDate"><br>Thành Tiền : 150$</label>
             </form>
         </section>
+
 
     </div>
 
