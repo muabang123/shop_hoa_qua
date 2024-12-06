@@ -826,3 +826,42 @@ label {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
+
+
+/* Các phần tử bảng sẽ tự điều chỉnh khi màn hình nhỏ */
+.stats-table, .invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stats-table th, .invoice-table th,
+.stats-table td, .invoice-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    .stats-table th, .stats-table td {
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .stats-table, .invoice-table {
+        font-size: 12px;
+    }
+
+    .stats-table th, .invoice-table th {
+        font-size: 14px;
+    }
+
+    .product-image img {
+        width: 30px;
+        height: auto;
+    }
+
+    .profile-info {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
