@@ -20,34 +20,50 @@
         <ul>
             <li><a href="dashboard.html">Dashboard</a></li>
             <li><a href="user-management.html">Quản Lý Người Dùng</a></li>
-            <li><a href="product-managerment-p1.html">Quản Lý Sản Phẩm</a></li>
-            <li><a href="QuanLyDonHang.html" class="active">Quản Lý Đơn Hàng </a></li>
-            <li><a href="add-product.html" >Thêm Sản Phẩm</a></li>
-            <li><a href="statistics.html" >Thống Kê Kinh Doanh</a></li>
+            <li><a href="product-managerment-p2.html" class="active">Quản Lý Sản Phẩm</a></li>
+            <li><a href="QuanLyDonHang.html">Quản Lý Đơn Hàng</a></li>
+            <li><a href="statistics.html">Thống Kê Kinh Doanh</a></li>
         </ul>
     </aside>
 
     <!-- Main Content -->
     <div class="content">
         <header class="dashboard-header">
-            <h1>Quản Lý Đơn Hàng</h1>
+            <h1>QUẢN LÝ ĐƠN HÀNG</h1>
             <div class="profile-info">
-                <img src="../assets/img/avaters/avatar4.jpg" alt="Admin Avatar"
+                <img src="D:\HK1-24-25\WEB AND APPS\Do-An\assets\img\avaters\avatar2.jpg.url" alt="Admin Avatar"
                     class="profile-avatar">
-                <span class="profile-name">BinhHuynh</span>
+                <span class="profile-name">HuynhBinh</span>
                 <a href="login.html" class="logout-btn">Đăng Xuất</a>
             </div>
         </header>
 
-        <section class="add-product-form">
+        <section class="add-product-form_2">
             <form action="" method="POST" enctype="multipart/form-data">
-                <label for="date-start">Từ ngày:</label>
-                <input type="date" id="date-start">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Từ ngày</th>
+                            <th>Đến ngày</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="date" id="date-start"></td>
+                            <td><input type="date" id="date-end"></td>
+                        </tr>
+                        <!-- Thêm các đơn hàng khác -->
+                    </tbody>
+                    <div class="search-bar">
+                        <form action="QuanLyDonHang.html" method="GET">
+                            <input type="text" name="search" placeholder="Tìm kiếm mã sản phẩm..." />
+                            <button type="submit">Tìm</button>
+                        </form>
+                    </div>
+                </table>
 
-                <label for="date-end">Đến ngày:</label>
-                <input type="date" id="date-end">
 
-                <label for="district-filter">Quận:</label>
+                <label for="district-filter">Quận: </label>
                 <select id="district-filter">
                     <option value="all">Tất cả</option>
                     <option value="district1">Quận 1</option>
@@ -62,6 +78,7 @@
                     <option value="ThuDuc_city">Thành Phố Thử Đức</option>
                     <!-- Thêm các quận khác -->
                 </select>
+                <br>
 
                 <label for="status-filter">Trạng thái:</label>
                 <select id="status-filter">
@@ -71,8 +88,9 @@
                     <option value="delivered">Đã giao thành công</option>
                     <option value="cancelled">Đã hủy</option>
                 </select>
+                <br>
 
-                <button type="submit" class="submit-btn" href="login.html" class="logout-btn">Áp Dụng</button>
+                <button type="submit" class="submit-btn" href="QuanLyDonHang.html" class="logout-btn">Áp Dụng</button>
             </form>
         </section>
         <section class="order-list">
@@ -82,8 +100,6 @@
                     <tr>
                         <th>Mã Đơn Hàng</th>
                         <th>Khách Hàng</th>
-                        <th>Địa Chỉ</th>
-                        <th>Thời Gian</th>
                         <th>Tình Trạng</th>
                         <th>Chi Tiết</th>
                     </tr>
@@ -92,18 +108,14 @@
                     <tr>
                         <td>DH001</td>
                         <td>Nguyễn Văn A</td>
-                        <td>Quận 1</td>
-                        <td>2024-11-29</td>
                         <td>Chưa xử lý</td>
-                        <td><a href="ChiTiet1.html">Xem Chi Tiết</a></td>
+                        <td><a href="ChiTiet1.html">Xem chi tiết</a></td>
                     </tr>
                     <tr>
                         <td>DH002</td>
                         <td>Trần Thị B</td>
-                        <td>Quận 3</td>
-                        <td>2024-11-28</td>
                         <td>Đã giao thành công</td>
-                        <td><a href="chitiet2.html">Xem Chi Tiết</a></td>
+                        <td><a href="chitiet2.html">Xem chi tiết</a></td>
                     </tr>
                     <!-- Thêm các đơn hàng khác -->
                 </tbody>
@@ -113,4 +125,4 @@
 
 </body>
 
-</html>     
+</html>
