@@ -18,9 +18,9 @@
             <li><a href="dashboard.html">Dashboard</a></li>
             <li><a href="user-management.html">Quản Lý Người Dùng</a></li>
             <li><a href="product-managerment-p1.html">Quản Lý Sản Phẩm</a></li>
-            <li><a href="QuanLyDonHang.html" >Quản Lý Đơn Hàng </a></li>
+            <li><a href="QuanLyDonHang.html">Quản Lý Đơn Hàng</a></li>
             <li><a href="add-product.html">Thêm Sản Phẩm</a></li>
-            <li><a href="statistics.html" class="active" >Thống Kê Kinh Doanh</a></li>
+            <li><a href="statistics.html" class="active">Thống Kê Kinh Doanh</a></li>
         </ul>
     </aside>
 
@@ -59,27 +59,40 @@
                             <th>Số Lượng Bán</th>
                             <th>Tổng Tiền</th>
                             <th>Thời Gian Bán</th>
+                            <th>Mô tả</th>
                         </tr>
                     </thead>
                     <tbody>
                         <!-- Dữ liệu mặt hàng sẽ được điền vào đây -->
                         <tr>
-                            <td>Dâu Tây</td>
+                            <td class="product-image">
+                                <a href="product_1.html"><img src="../assets/img/products/product-img-1.jpg" alt=""></a>
+                                <span>Dâu Tây</span>
+                            </td>
                             <td>50</td>
                             <td>4,250$</td>
                             <td>31/12/2024 08:00</td>
+                            <td>Tươi ngon, vị chua hoàn hảo </td>
                         </tr>
                         <tr>
-                            <td>Nho</td>
+                            <td class="product-image">
+                                <a href="product_2.html"><img src="../assets/img/products/product-img-2.jpg" alt=""></a>
+                                <span>Nho</span>
+                            </td>
                             <td>30</td>
                             <td>2,100$</td>
-                            <td>08/01/2024 10:30</td>
+                            <td>08/01/2024 10:30</td>   
+                            <td>Độ ngọt vừa phải, ngoại hình bất mắt</td>
                         </tr>
                         <tr>
-                            <td>Chanh</td>
+                            <td class="product-image"> 
+                                <a href="product_3.html"><img src="../assets/img/products/product-img-3.jpg" alt=""></a>
+                                <span>Chanh</span>
+                            </td>
                             <td>40</td>
                             <td>1,400$</td>
                             <td>23/01/2024 15:45</td>
+                            <td>Chanh rất thơm, phù hợp để làm nước và các loại bánh</td>
                         </tr>
                     </tbody>
                 </table>
@@ -88,18 +101,17 @@
                     <p><strong>Sản Phẩm Bán Chạy Nhất: </strong>Dâu Tây</p>
                     <p><strong>Sản Phẩm Bán Ế Nhất: </strong>Chanh</p>
                 </div>
-                <button class="view-invoice-btn">Xem Hóa Đơn Theo Mặt Hàng</button>
             </div>
-
             <!-- Thống kê theo khách hàng -->
             <div class="stats-item">
-                <h3>Thống Kê Theo Khách Hàng</h3>
+                <h3>Thống Kê Khách Hàng Đã Mua Hàng</h3>
                 <table class="stats-table">
-                    <thead>
+                    <thead> 
                         <tr>
                             <th>Khách Hàng</th>
-                            <th>Tổng Doanh Thu</th>
+                            <th>Tổng Tiền</th>
                             <th>Thời Gian Mua</th>
+                            <th>Xem Hóa Đơn</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -108,15 +120,88 @@
                             <td>Ngô Quang Liêm</td>
                             <td>4,500$</td>
                             <td>08/01/2024 09:15</td>
+                            <td>
+                            <button onclick="openInvoice('Ngô Quang Liêm')">Xem</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>Trần Trung Kiên</td>
                             <td>3,250$</td>
                             <td>30/01/2024 14:45</td>
+                            <td>
+                            <button onclick="openInvoice('Trần Trung Kiên')">Xem</button>
+                            </td>
                         </tr>
+                        <script src="./js/statistics.js"></script>
                     </tbody>
                 </table>
-                <button class="view-invoice-btn">Xem Hóa Đơn Của Khách Hàng</button>
+            </div>
+            <script>
+                // Hàm mở modal và hiển thị chi tiết hóa đơn
+                function openInvoice(customerName) {
+                    const modal = document.getElementById("invoice-modal");
+                    const invoiceDetails = document.getElementById("invoice-details");
+                    const invoiceTotal = document.getElementById("invoice-total");
+                
+                    const sampleData = {
+                        "Ngô Quang Liêm": [
+                            { item: "Dâu Tây", quantity: 10, price: 3.5, total: 35 },
+                            { item: "Nho", quantity: 5, price: 4.2, total: 21 }
+                        ],
+                        "Trần Trung Kiên": [
+                            { item: "Chanh", quantity: 20, price: 2.0, total: 40 }
+                        ]
+                    };
+                
+                    const customerData = sampleData[customerName] || [];
+                    invoiceDetails.innerHTML = customerData.map(row => `
+                        <tr>
+                            <td>${row.item}</td>
+                            <td>${row.quantity}</td>
+                            <td>${row.price}$</td>
+                            <td>${row.total}$</td>
+                        </tr>
+                    `).join("");
+                
+                    const total = customerData.reduce((sum, row) => sum + row.total, 0);
+                    invoiceTotal.textContent = `Tổng Cộng: ${total}$`;
+                
+                    modal.style.display = "block";
+                }
+                
+                // Hàm đóng modal
+                function closeModal() {
+                    document.getElementById("invoice-modal").style.display = "none";
+                }
+                
+                // Sự kiện đóng modal khi nhấp ra ngoài
+                window.onclick = function(event) {
+                    const modal = document.getElementById("invoice-modal");
+                    if (event.target === modal) {
+                        modal.style.display = "none";
+                    }
+                };
+                </script>
+            <!-- Modal hiển thị chi tiết hóa đơn -->
+            <div id="invoice-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="closeModal()">&times;</span>
+                    <h2>Chi Tiết Hóa Đơn</h2>
+                    <table class="invoice-table">
+                        <thead>
+                            <tr>
+                                <th>Mặt Hàng</th>
+                                <th>Số Lượng</th>
+                                <th>Đơn Giá</th>
+                                <th>Tổng Tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody id="invoice-details">
+                            <!-- Nội dung hóa đơn sẽ được thêm vào đây bằng JavaScript -->
+                        </tbody>
+                    </table>
+                    <p id="invoice-total"><strong>Tổng Cộng: </strong></p>
+                </div>
             </div>
         </div>
     </div>

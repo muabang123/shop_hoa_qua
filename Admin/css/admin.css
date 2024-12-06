@@ -673,6 +673,13 @@ button, label {
     cursor: pointer; /* Hiển thị con trỏ chuột dạng tay khi hover */
 }
 
+.confirm__edit {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
 
 /* Cách ẩn/hiện các button */
 label {
