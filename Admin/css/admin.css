@@ -848,3 +848,13 @@ label {
 .search-bar button:hover {
     background-color: #45a049;
 }
+
+.add-product-form_2 {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 30px auto;
+    /* Thêm margin trên và dưới */
+}
