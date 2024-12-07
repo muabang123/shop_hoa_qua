@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
     <title>Dashboard Admin</title>
-    <link rel="stylesheet" href="./css/dashboard.css">
-    <link rel="stylesheet" href="./css/admin.css"> <!-- Đường dẫn tới CSS --></head>
+    <link rel="stylesheet" href="./css1/dashboard.css">
+    <link rel="stylesheet" href="./css1/admin.css"> <!-- Đường dẫn tới CSS --></head>
 
 <body>
 
@@ -56,7 +56,8 @@
                         <td>nguyenvanthuan@gmail.com</td>
                         <td><button class="status-btn active">Hoạt Động</button></td>
                         <td>
-                            <label for="confirm-lock-1" class="lock-btn">Khóa</label> <!-- Khóa -->
+                            <label for="confirm-lock-1" class="lock-btn">Khóa</label>
+                             <!-- Khóa -->
                         </td>
                     </tr>
 
@@ -80,7 +81,13 @@
     <div class="modal">
         <div class="modal-content">
             <h3>Bạn có chắc chắn muốn khóa người dùng này?</h3>
-            <label for="confirm-lock-1" class="confirm-btn">Xác Nhận</label>
+            <label for="confirm-lock-1" class="confirm-btn" onclick="alertAndRedirect1()">Xác Nhận</label>
+            <script>
+                function alertAndRedirect1() {
+                    window.location.href = 'user-management.html'; // Địa chỉ trang bạn muốn chuyển tới
+                    alert('Bạn đã khóa người dùng này!');
+                }
+            </script> <!-- Khóa -->
             <label for="confirm-lock-1" class="cancel-btn">Hủy Bỏ</label>
         </div>
     </div>
@@ -89,7 +96,13 @@
     <div class="modal">
         <div class="modal-content">
             <h3>Bạn có chắc chắn muốn mở khóa người dùng này?</h3>
-            <label for="confirm-lock-2" class="confirm-btn">Xác Nhận</label>
+            <label for="confirm-lock-2" class="confirm-btn" onclick="alertAndRedirect()">Xác Nhận</label>
+            <script>
+                function alertAndRedirect() {
+                    window.location.href = 'user-management.html'; // Địa chỉ trang bạn muốn chuyển tới
+                    alert('Bạn đã mở khóa người dùng này!');
+                }
+            </script> <!--Mở Khóa -->
             <label for="confirm-lock-2" class="cancel-btn">Hủy Bỏ</label>
         </div>
     </div>
