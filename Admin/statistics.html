@@ -58,7 +58,7 @@
                             <th>Số Lượng Bán</th>
                             <th>Tổng Tiền</th>
                             <th>Thời Gian Bán</th>
-                            <th>Mô tả</th>
+                            <th>Xem Hóa Đơn</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -71,7 +71,9 @@
                             <td>50</td>
                             <td>4,250$</td>
                             <td>31/12/2024 08:00</td>
-                            <td>Tươi ngon, vị chua hoàn hảo </td>
+                            <td>
+                                <button onclick="openInvoice('Dâu Tây')">Xem</button>
+                            </td>
                         </tr>
                         <tr>
                             <td class="product-image">
@@ -80,8 +82,10 @@
                             </td>
                             <td>30</td>
                             <td>2,100$</td>
-                            <td>08/01/2024 10:30</td>   
-                            <td>Độ ngọt vừa phải, ngoại hình bất mắt</td>
+                            <td>08/01/2024 10:30</td>  
+                            <td>
+                                <button onclick="openInvoice('Nho')">Xem</button>
+                            </td> 
                         </tr>
                         <tr>
                             <td class="product-image"> 
@@ -91,7 +95,9 @@
                             <td>40</td>
                             <td>1,400$</td>
                             <td>23/01/2024 15:45</td>
-                            <td>Chanh rất thơm, phù hợp để làm nước và các loại bánh</td>
+                            <td>
+                                <button onclick="openInvoice('Chanh')">Xem</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -131,8 +137,19 @@
                             <button onclick="openInvoice('Trần Trung Kiên')">Xem</button>
                             </td>
                         </tr>
+                        <tr>
+                            <td>Lương Chước Minh</td>
+                            <td>7,000$</td>
+                            <td>30/01/2024 14:45</td>
+                            <td>
+                            <button onclick="openInvoice('Lương Chước Minh')">Xem</button>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
+                <div class="summary">
+                    <p><strong>Khách Hàng mua nhiều nhất: </strong>Lương Chước Minh</p>
+                </div>
             </div>
             <script>
                 // Hàm mở modal và hiển thị chi tiết hóa đơn
@@ -142,18 +159,40 @@
                     const invoiceTotal = document.getElementById("invoice-total");
                 
                     const sampleData = {
+                        "Dâu Tây":[
+                            { customerName: "Ngô Quang Liêm", orderId: "DH001", date: "08/01/2024", item: "Dâu Tây", quantity:20 , price: 3.5, total: 35 },
+                            { customerName: "Trần Trung Kiên", orderId: "DH002", date: "12/03/2024", item: "Dâu Tây", quantity:20 ,price: 3.5, total: 35 },
+                            { customerName: "Lương Chước Minh", orderId: "DH003", date: "15/03/2024", item: "Dâu Tây", quantity:10, price: 3.5, total: 35 }
+                        ],
+                        "Nho":[
+                            { customerName: "Ngô Quang Liêm", orderId: "DH004", date: "08/01/2024", item: "Nho", quantity:10 , price: 3.5, total: 35 },
+                            { customerName: "Trần Trung Kiên", orderId: "DH006", date: "12/03/2024", item: "Nho", quantity:10 , price: 3.5, total: 35 },
+                            { customerName: "Lương Chước Minh", orderId: "DH003", date: "15/03/2024", item: "Nho", quantity:10, price: 3.5, total: 35 }
+                        ],
+                        "Chanh":[
+                            { customerName: "Ngô Quang Liêm", orderId: "DH004", date: "08/01/2024", item: "Chanh", quantity:20 , price: 3.5, total: 35 },
+                            { customerName: "Trần Trung Kiên", orderId: "DH006", date: "12/03/2024", item: "Chanh", quantity:20 , price: 3.5, total: 35 }
+                        ],
                         "Ngô Quang Liêm": [
-                            { item: "Dâu Tây", quantity: 10, price: 3.5, total: 35 },
-                            { item: "Nho", quantity: 5, price: 4.2, total: 21 }
+                            { customerName: "Ngô Quang Liêm", orderId: "DH001", date: "08/01/2024", item: "Dâu Tây", quantity:20 , price: 3.5, total: 35 },
+                            { customerName: "Ngô Quang Liêm", orderId: "DH002", date: "12/03/2024", item: "Dâu Tây", quantity:20 ,price: 3.5, total: 35 }
                         ],
                         "Trần Trung Kiên": [
-                            { item: "Chanh", quantity: 20, price: 2.0, total: 40 }
+                            { customerName: "Trần Trung Kiên", orderId: "DH001", date: "08/01/2024", item: "Dâu Tây", quantity:20 , price: 3.5, total: 35 },
+                            { customerName: "Trần Trung Kiên", orderId: "DH002", date: "12/03/2024", item: "Dâu Tây", quantity:20 ,price: 3.5, total: 35 }
+                        ],
+                        "Lương Chước Minh": [
+                            { customerName: "Lương Chước Minh", orderId: "DH001", date: "08/01/2024", item: "Dâu Tây", quantity:20 , price: 3.5, total: 35 },
+                            { customerName: "Lương Chước Minh", orderId: "DH002", date: "12/03/2024", item: "Dâu Tây", quantity:20 ,price: 3.5, total: 35 }
                         ]
                     };
                 
                     const customerData = sampleData[customerName] || [];
                     invoiceDetails.innerHTML = customerData.map(row => `
                         <tr>
+                            <td>${row.customerName}</td>
+                            <td>${row.orderId}</td>
+                            <td>${row.date}</td>
                             <td>${row.item}</td>
                             <td>${row.quantity}</td>
                             <td>${row.price}$</td>
@@ -188,7 +227,10 @@
                     <table class="invoice-table">
                         <thead>
                             <tr>
-                                <th>Mặt Hàng</th>
+                                <th>Mã Đơn Hàng</th>
+                                <th>Ngày</th>
+                                <th>Tên Khách Hàng</th>
+                                <th>Sản Phẩm</th>
                                 <th>Số Lượng</th>
                                 <th>Đơn Giá</th>
                                 <th>Tổng Tiền</th>
