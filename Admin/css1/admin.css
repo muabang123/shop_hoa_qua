@@ -1,0 +1,857 @@
+/* admin.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f28123;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-logo {
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #e76a1f;
+}
+
+/* Main content */
+.content {
+    margin-left: 220px;
+    padding: 20px;
+    width: calc(100% - 220px);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-name {
+    font-size: 16px;
+    color: #333;
+}
+
+
+
+/* Tạo kiểu cho form thêm sản phẩm */
+.add-product-form {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 30px auto; /* Thêm margin trên và dưới */
+}
+
+.add-product-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-product-form label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Đảm bảo input và textarea có khoảng cách hợp lý */
+.add-product-form input,
+.add-product-form textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Thêm một chút margin cho textarea */
+.add-product-form textarea {
+    resize: vertical;
+}
+
+/* Button thêm sản phẩm */
+.submit-btn {
+    background-color: #f28123;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px; /* Khoảng cách trên nút */
+    align-self: flex-end; /* Căn nút về bên phải */
+}
+
+
+.submit-btn:hover {
+    background-color: #e76a1f;
+}
+
+/* Thêm khoảng cách giữa tiêu đề và form */
+.dashboard-header h1 {
+    margin-bottom: 20px; /* Thêm khoảng cách dưới tiêu đề */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .add-product-form {
+        padding: 20px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-product-form {
+        padding: 15px;
+    }
+}
+
+
+/* Thêm nút đăng xuất bên cạnh profile */
+.logout-btn {
+    color: #f28123;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 2px solid #f28123;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #f28123;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.add-user-btn {
+    background-color: #f28123;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin: 1%;
+    transition: all 0.3s ease;
+}
+
+.add-user-btn:hover {
+    background-color: #e76a1f;
+}
+
+.add-pro-btn {
+    background-color: #f28123;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1%;
+    transition: all 0.3s ease;
+}
+
+.add-pro-btn:hover {
+    background-color: #e76a1f;
+}
+
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.user-table th,
+.user-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-table th {
+    background-color: #f28123;
+    color: white;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.user-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.status-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.status-btn.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.status-btn.blocked {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Buttons for actions */
+.edit-btn,
+.lock-btn, /* Nút Khóa */
+.unlock-btn, /* Nút Mở Khóa */
+.delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background-color: #f28123;
+    color: white;
+}
+
+.lock-btn { /* Nút Khóa */
+    background-color: #f44336;
+    color: white;
+}
+
+.unlock-btn { /* Nút Mở Khóa */
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #007BFF;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #e76a1f;
+}
+
+.lock-btn:hover {
+    background-color: #d32f2f; /* Darker red */
+}
+
+.unlock-btn:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.delete-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .content {
+        margin-left: 200px;
+    }
+
+    .user-table {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+        position: static;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .user-table {
+        font-size: 12px;
+    }
+
+    .add-user-btn {
+        font-size: 14px;
+    }
+}
+/* Bảng sản phẩm */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-table th,
+.product-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-table th {
+    background-color: #f28123;
+    color: white;
+}
+
+.product-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.product-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.product-image-preview {
+    max-width: 150px; /* Đặt chiều rộng tối đa */
+    max-height: 150px; /* Đặt chiều cao tối đa */
+    object-fit: cover; /* Giữ tỉ lệ và cắt ảnh nếu cần */
+    margin-top: 10px; /* Khoảng cách giữa ảnh và các thành phần khác */
+}
+
+/* Nút xóa */
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Nút sửa (nếu cần) */
+.edit-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background-color: #e67e22;
+}
+/* Bảng và form sửa sản phẩm */
+.edit-product-form {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+/* Các nhóm trong form */
+/* admin.css */
+.content {
+    padding: 20px;
+}
+
+.form-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.edit-product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.button-group {
+    text-align: right;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f28123; /* màu chủ đạo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #e26c1d;
+}
+
+.current-image {
+    display: flex;
+    align-items: center;
+}
+
+.remove-image-checkbox {
+    margin-right: 5px;
+}
+
+.remove-image-text {
+    cursor: pointer;
+}
+
+
+/* Cải thiện bố cục cho phần sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #f28123;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Nội dung của trang */
+.content {
+    margin-left: 220px;
+    padding: 20px;
+    width: calc(100% - 220px);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-name {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Nút đăng xuất */
+.logout-btn {
+    color: #f28123;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 2px solid #f28123;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #f28123;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .content {
+        margin-left: 200px;
+    }
+
+    .edit-product-form {
+        padding: 20px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+        position: static;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .edit-product-form {
+        padding: 15px;
+    }
+}
+
+
+.order-list {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1%;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f28123;
+    color: #fff;
+}
+
+.xxx {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* CSS cho modal */
+.modal-toggle {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.modal-toggle:checked + .modal {
+    visibility: visible;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+}
+
+button, label {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    margin-right: 10px;
+    padding: 10px 20px; /* Thêm padding để nút đẹp hơn */
+    border-radius: 8px; /* Bo góc */
+    cursor: pointer; /* Hiển thị con trỏ chuột dạng tay khi hover */
+}
+
+.cancel-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Thêm padding để nút đẹp hơn */
+    border-radius: 8px; /* Bo góc */
+    cursor: pointer; /* Hiển thị con trỏ chuột dạng tay khi hover */
+}
+
+
+/* Cách ẩn/hiện các button */
+label {
+    cursor: pointer;
+}
+
+.lock-btn, .unlock-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+.add-user-form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.add-user-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.add-user-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.add-user-form input,
+.add-user-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-user-form .submit-btn {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-user-form .submit-btn:hover {
+    background-color: darkgreen;
+}
+
+/* Cấu trúc lưới cho danh sách sản phẩm */
+/* Cấu trúc sản phẩm sử dụng Flexbox để căn giữa */
+.product-management {
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa các ô sản phẩm theo chiều ngang */
+    align-items: center; /* Căn giữa các ô sản phẩm theo chiều dọc */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    margin-top: 20px; /* Khoảng cách từ phần tiêu đề tới sản phẩm */
+    flex-wrap: wrap; /* Cho phép các sản phẩm xếp xuống dòng nếu không đủ chỗ */
+}
+
+/* Mỗi ô sản phẩm */
+.product-item {
+    text-align: center; /* Căn giữa văn bản trong sản phẩm */
+    border: 1px solid #ddd; /* Viền nhẹ cho sản phẩm */
+    padding: 20px; /* Khoảng cách trong ô sản phẩm */
+    border-radius: 8px; /* Bo tròn góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho sản phẩm */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa các phần tử trong ô sản phẩm */
+    justify-content: space-between; /* Chia đều các phần tử trong ô sản phẩm */
+    height: 300px; /* Chiều cao cố định cho các ô sản phẩm */
+    background-color: #fff; /* Nền sáng cho sản phẩm */
+    transition: transform 0.3s ease; /* Thêm hiệu ứng hover */
+}
+
+/* Chỉnh sửa ảnh sản phẩm */
+.product-img {
+    width: 100%; /* Chiều rộng ảnh bằng chiều rộng của ô sản phẩm */
+    height: 150px; /* Chiều cao cố định cho ảnh */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 8px; /* Bo tròn ảnh */
+    margin-bottom: 15px; /* Khoảng cách giữa ảnh và tên sản phẩm */
+}
+
+/* Thêm hiệu ứng hover cho sản phẩm */
+.product-item:hover {
+    transform: translateY(-5px); /* Hiệu ứng nâng cao khi rê chuột */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Làm bóng đậm hơn khi hover */
+}
+
+
+/* Chỉnh sửa các nút action (sửa/xóa) */
+.product-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: auto; /* Đẩy các nút xuống dưới */
+}
+
+.action-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer; /* Thêm hiệu ứng khi rê chuột vào icon */
+}
+
+.pagination{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.pagination a{
+	text-decoration: none;
+	padding: 10px 13px;
+	margin: 2px;
+	color: black;
+	/*not reset display att for anchor here, anchor will stack on the div block above*/
+	display: inline-block; 
+	border: 2px solid transparent;  
+}
+
+.pagination a.active{
+	background-color: #333;
+	color: white;
+	border-radius: 4px;
+
+}
+
+.pagination a:hover:not(.active){
+	border-radius: 4px;
+	border: 2px solid #333;
+}
+
+/* Thanh tìm kiếm */
+.search-bar {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.search-bar input {
+    padding: 8px;
+    font-size: 14px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #45a049;
+}
