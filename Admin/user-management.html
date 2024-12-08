@@ -7,7 +7,7 @@
     <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
     <title>Dashboard Admin</title>
     <link rel="stylesheet" href="./css1/dashboard.css">
-    <link rel="stylesheet" href="./css1/admin.css"> <!-- Đường dẫn tới CSS --></head>
+    <link rel="stylesheet" href="./css1/user.css"> <!-- Đường dẫn tới CSS --></head>
 
 <body>
 
@@ -39,7 +39,7 @@
 
         <section class="user-list">
             <button class="add-user-btn" onclick="window.location.href='add-user.html'">Thêm Người Dùng</button>
-
+        
             <table class="user-table">
                 <thead>
                     <tr>
@@ -50,29 +50,44 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- User 1 (Hoạt động) -->
+                    <!-- User 1 -->
                     <tr>
                         <td>Nguyễn Văn Thuận</td>
                         <td>nguyenvanthuan@gmail.com</td>
                         <td><button class="status-btn active">Hoạt Động</button></td>
                         <td>
+                            <!-- Nút Khóa nằm bên trái -->
                             <label for="confirm-lock-1" class="lock-btn">Khóa</label>
-                             <!-- Khóa -->
+                            <!-- Các icon nằm bên phải -->
+                            <a href="edit-user.html">
+                                <img src="../assets/img/edit.png" alt="Sửa" class="action-icona">
+                            </a>
+                            <a href="javascript:void(0);" onclick="document.getElementById('confirm-delete').checked = true;">
+                                <img src="../assets/img/delete.png" alt="Xóa" class="action-icon">
+                            </a>
                         </td>
                     </tr>
-
-                    <!-- User 2 (Bị khóa) -->
+                    <!-- User 2 -->
                     <tr>
                         <td>Trần Thị Mẫu</td>
                         <td>mautran@gmail.com</td>
                         <td><button class="status-btn blocked">Đã Khóa</button></td>
                         <td>
-                            <label for="confirm-lock-2" class="unlock-btn">Mở Khóa</label> <!-- Mở khóa -->
+                            <!-- Nút Mở Khóa nằm bên trái -->
+                            <label for="confirm-lock-2" class="unlock-btn">Mở Khóa</label>
+                            <!-- Các icon nằm bên phải -->
+                            <a href="edit-user.html">
+                                <img src="../assets/img/edit.png" alt="Sửa" class="action-icona">
+                            </a>
+                            <a href="javascript:void(0);" onclick="document.getElementById('confirm-delete').checked = true;">
+                                <img src="../assets/img/delete.png" alt="Xóa" class="action-icon">
+                            </a>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </section>
+        
 
     </div>
 
@@ -107,6 +122,22 @@
         </div>
     </div>
 
+    <input type="checkbox" id="confirm-delete" class="modal-toggle">
+    <div class="modal">
+        <div class="modal-content">
+            <h3>Bạn có chắc chắn muốn xóa người dùng này?</h3>
+            <label for="confirm-delete" class="confirm-btn" onclick="alertAndRedirect()">Xác Nhận</label>
+            <script>
+                function alertAndRedirect() {
+                    window.location.href = 'user-management.html'; // Địa chỉ trang bạn muốn chuyển tới
+                    alert('Bạn đã xóa người dùng này!');
+                }
+            </script> <!--Mở Khóa -->
+            <label for="confirm-delete" class="cancel-btn">Hủy Bỏ</label>
+        </div>
+    </div>
+
+   
 </body>
 
 </html>

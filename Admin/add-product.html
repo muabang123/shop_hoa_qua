@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
     <title>Thêm Sản Phẩm</title>
-    <link rel="stylesheet" href="./css/admin.css">
-    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css1/admin.css">
+    <link rel="stylesheet" href="./css1/dashboard.css">
 </head>
 
 <body>
@@ -42,6 +42,15 @@
             <form action="" method="POST" enctype="multipart/form-data">
                 <label for="product-name">Tên Sản Phẩm</label>
                 <input type="text" id="product-name" name="product-name" required>
+
+                <div class="form-group">
+                    <label for="product-type">Loại:</label>
+                        <select id="product-type" name="product-type" required>
+                        <option value="nho">Nho</option>
+                        <option value="tao">Táo</option>
+                        <option value="dau">Dâu</option>
+                        </select>
+                </div>
 
                 <label for="product-description">Mô Tả</label>
                 <textarea id="product-description" name="product-description" rows="5" required></textarea>

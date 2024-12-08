@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
+    <title>Sửa Thông Tin Người Dùng</title>
+    <link rel="stylesheet" href="./css1/admin.css">
+    <link rel="stylesheet" href="./css1/dashboard.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/img/logo.png" alt="Logo" class="sidebar-logo">
+        </div>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="user-management.html">Quản Lý Người Dùng</a></li>
+            <li><a href="product-managerment-p1.html">Quản Lý Sản Phẩm</a></li>
+            <li><a href="QuanLyDonHang.html">Quản Lý Đơn Hàng </a></li>
+            <li><a href="statistics.html">Thống Kê Kinh Doanh</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header class="dashboard-header">
+            <h1>Sửa Thông Tin Người Dùng</h1>
+            <div class="profile-info">
+                <img src="../assets/img/avaters/avatar4.jpg" alt="Admin Avatar" class="profile-avatar">
+                <span class="profile-name">HuynhBinh</span>
+                <a href="login.html" class="logout-btn">Đăng Xuất</a>
+            </div>
+        </header>
+
+        <section class="add-product-form">
+            <form action="" method="POST" enctype="multipart/form-data">
+                <!-- Họ và Tên -->
+                <label for="full-name">Họ và Tên</label>
+                <input type="text" id="full-name" name="full-name" value="Nguyễn Văn Thuận" required>
+
+                <!-- Số Điện Thoại -->
+                <label for="phone">Số Điện Thoại</label>
+                <input type="number" id="phone" name="phone" value="0901234567" required>
+
+                <!-- Email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="nguyenvanthuan@gmail.com" required>
+
+                <!-- Địa Chỉ -->
+                <label for="address">Địa Chỉ</label>
+                <input type="text" id="address" name="address" value="Hà Nội, Việt Nam" required>
+
+                <!-- Nút Lưu Thay Đổi -->
+                <a href="user-management.html" class="submit-btn">Lưu thay đổi</a>
+
+            </form>
+        </section>
+    </div>
+
+</body>
+
+</html>
