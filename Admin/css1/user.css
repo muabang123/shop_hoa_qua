@@ -141,7 +141,6 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-decoration: none;
     margin-top: 20px; /* Khoảng cách trên nút */
     align-self: flex-end; /* Căn nút về bên phải */
 }
@@ -224,34 +223,33 @@ body {
 }
 
 
-.user-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+.user-table td:last-child {
+    display: flex;               /* Sử dụng Flexbox để căn chỉnh các phần tử trong cột */
+    justify-content: space-between; /* Đảm bảo phần tử đầu tiên ("Khóa"/"Mở Khóa") nằm bên trái, phần tử thứ hai (icon) nằm bên phải */
+    align-items: center;         /* Căn giữa các phần tử theo chiều dọc */
+    padding: 10px;               /* Khoảng cách giữa các phần tử và cạnh của ô */
 }
 
-.user-table th,
-.user-table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+.unlock-btn {
+    margin-right: 15px;          /* Khoảng cách giữa nút Khóa/Mở Khóa và các icon bên phải */
 }
 
-.user-table th {
-    background-color: #f28123;
-    color: white;
+.lock-btn {
+    margin-right: 38px;          /* Khoảng cách giữa nút Khóa/Mở Khóa và các icon bên phải */
 }
 
-.user-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+.action-icona, .action-icon {
+    width: 25px;                 /* Đặt chiều rộng của icon */
+    height: 25px;                /* Đặt chiều cao của icon */
+    cursor: pointer;            /* Thêm con trỏ chuột khi hover */
+    margin-left: 10px;           /* Khoảng cách giữa các icon */
+    transition: opacity 0.3s;    /* Thêm hiệu ứng mờ khi hover */
 }
 
-.user-table tr:hover {
-    background-color: #f1f1f1;
+.action-icona:hover, .action-icon:hover {
+    opacity: 0.7;                /* Thêm hiệu ứng hover để làm mờ icon */
 }
+
 
 .status-btn {
     padding: 6px 12px;
@@ -288,15 +286,10 @@ body {
     color: white;
 }
 
-.lock-btn { /* Nút Khóa */
-    background-color: #f44336;
-    color: white;
-}
 
-.unlock-btn { /* Nút Mở Khóa */
-    background-color: #4CAF50;
-    color: white;
-}
+
+
+
 
 .delete-btn {
     background-color: #007BFF;
@@ -447,7 +440,6 @@ body {
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
 }
 
 .form-group label {
@@ -462,12 +454,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-.form-group select {
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
+
 .button-group {
     text-align: right;
 }
@@ -701,11 +688,16 @@ label {
 }
 
 .lock-btn, .unlock-btn {
-    background-color: #f39c12;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
+    background-color: #f39c12; /* Màu nền vàng */
+    color: white; /* Màu chữ trắng */
+    padding: 5px 10px; /* Cung cấp khoảng cách bên trong */
+    border: none; /* Không có viền */
+    cursor: pointer; /* Con trỏ chuột dạng tay khi hover */
+    border-radius: 5px; /* Bo tròn các góc */
+    font-size: 14px; /* Cỡ chữ vừa phải */
+    text-align: center; /* Căn giữa chữ trong nút */
+    display: inline-block; /* Đảm bảo các nút nằm ngang hàng */
+    vertical-align: middle; /* Căn chỉnh theo chiều dọc */
 }
 .add-user-form {
     margin: 20px;
@@ -806,7 +798,6 @@ label {
     cursor: pointer; /* Thêm hiệu ứng khi rê chuột vào icon */
 }
 
-
 .pagination{
 	text-align: center;
 	margin-top: 10px;
@@ -834,37 +825,6 @@ label {
 	border-radius: 4px;
 	border: 2px solid #333;
 }
-
-.paginationa{
-	text-align: center;
-	margin-top: 10px;
-	margin-bottom: 20px;
-    
-}
-
-.paginationa a{
-	text-decoration: none;
-	padding: 10px 13px;
-	margin: 2px;
-	color: black;
-	/*not reset display att for anchor here, anchor will stack on the div block above*/
-	display: inline-block; 
-	 border: 2px solid #f39c12;
-}
-
-.paginationa a.active{
-	background-color: #f39c12;
-	color: white;
-	border-radius: 4px;
-
-}
-
-.paginationa a:hover:not(.active){
-	border-radius: 4px;
-	border: 2px solid #333;
-}
-
-
 
 /* Thanh tìm kiếm */
 .search-bar {
