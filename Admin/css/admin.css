@@ -831,6 +831,16 @@ label {
     /* Thêm margin trên và dưới */
 }
 
+.add-product-form_3 {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 30px auto;
+    /* Thêm margin trên và dưới */
+}
+
 
 /* Các phần tử bảng sẽ tự điều chỉnh khi màn hình nhỏ */
 .stats-table, .invoice-table {
