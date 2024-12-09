@@ -28,6 +28,7 @@
             <li><a href="user-management.html">Quản Lý Người Dùng</a></li>
             <li><a href="product-managerment-p1.html">Quản Lý Sản Phẩm</a></li>
             <li><a href="QuanLyDonHang.html" class="active">Quản Lý Đơn Hàng </a></li>
+            <li><a href="add-product.html">Thêm Sản Phẩm</a></li>
             <li><a href="statistics.html">Thống Kê Kinh Doanh</a></li>
         </ul>
     </aside>
@@ -49,11 +50,11 @@
                 <div class="aA00">
                     <h2>Chi Tiết Đơn Hàng</h2>
                 </div>
-                <label for="startDate"><br>-Mã đơn hàng : DH001</label>
-                <label for="startDate"><br>-Khách hàng : Nguyễn Văn A</label>
+
+                <label for="startDate">-Mã đơn hàng : DH001</label>
+                <label for="startDate"><br>-Khách hàng : Ngô Quang Liêm</label>
                 <label for="startDate"><br>-Tình trạng : <td>
                         <select id="status-filter">
-                            <option value="all">Tất cả</option>
                             <option value="new">Chưa xử lý</option>
                             <option value="confirmed">Đã xác nhận</option>
                             <option value="delivered">Giao thành công</option>
@@ -61,12 +62,34 @@
                         </select>
                     </td></label>
                 <button>Lưu</button>
-                <label for="startDate"><br>-Sản Phẩm : Nho</label>
-                <label for="startDate"><br>-Số lượng : 3</label>
-                <label for="startDate"><br>-Địa chỉ : Quận 1</label>
+                <label for="startDate"><br>-Địa chỉ : Quận Tân Bình</label>
                 <label for="startDate"><br>-Thời gian đặt : 2024-11-29</label>
-                <label for="startDate"><br>-Đơn giá : 50$</label>
-                <label for="startDate"><br>-Thành Tiền : 150$</label>
+                <label for="startDate"><br>
+                    <table>
+                        <thead>
+                            <th>Sản Phẩm</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nho</td>
+                                <td>50$</td>
+                                <td>3</td>
+                                <td>150$</td>
+                            </tr>
+                            <tr>
+                                <td>Mâm xôi</td>
+                                <td>80$</td>
+                                <td>20</td>
+                                <td>1600$</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </label>
+                <label for="startDate"><br>-----Tổng tiền : 1750$</label>
             </form>
         </section>
 
