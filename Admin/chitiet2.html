@@ -28,6 +28,7 @@
             <li><a href="user-management.html">Quản Lý Người Dùng</a></li>
             <li><a href="product-managerment-p1.html">Quản Lý Sản Phẩm</a></li>
             <li><a href="QuanLyDonHang.html" class="active">Quản Lý Đơn Hàng </a></li>
+            <li><a href="add-product.html">Thêm Sản Phẩm</a></li>
             <li><a href="statistics.html">Thống Kê Kinh Doanh</a></li>
         </ul>
     </aside>
@@ -49,24 +50,52 @@
                 <div class="aA00">
                     <h2>Chi Tiết Đơn Hàng</h2>
                 </div>
-                <label for="startDate"><br>-Mã đơn hàng : DH002</label>
-                <label for="startDate"><br>-Khách hàng : Trần Thị B</label>
+                <label for="startDate">-Mã đơn hàng : DH002</label>
+                <label for="startDate"><br>-Khách hàng : Huỳnh Nguyên Bình</label>
                 <label for="startDate"><br>-Tình trạng :<td>
                         <select id="status-filter">
-                            <option value="all">Tất cả</option>
+                            <option value="all">Giao thành công</option>
                             <option value="new">Chưa xử lý</option>
                             <option value="confirmed">Đã xác nhận</option>
-                            <option value="delivered">Giao thành công</option>
                             <option value="cancelled">Đã hủy</option>
                         </select>
                     </td></label>
                 <button>Lưu</button>
-                <label for="startDate"><br>-Sản Phẩm : Kiwi</label>
-                <label for="startDate"><br>-Số lượng : 7</label>
                 <label for="startDate"><br>-Địa chỉ : Quận 3</label>
                 <label for="startDate"><br>-Thời gian đặt : 2024-11-28</label>
-                <label for="startDate"><br>-Đơn giá : 50$</label>
-                <label for="startDate"><br>-Thành Tiền : 350$</label>
+                <label for="startDate"><br>
+                    <table>
+                        <thead>
+                            <th>Sản Phẩm</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Kiwi</td>
+                                <td>50$</td>
+                                <td>7</td>
+                                <td>350$</td>
+                            </tr>
+                            <tr>
+                                <td>Chanh Đài Loan</td>
+                                <td>35$</td>
+                                <td>2</td>
+                                <td>70$</td>
+                            </tr>
+                            <tr>
+                                <td>Dâu Tây Việt Nam</td>
+                                <td>85$</td>
+                                <td>4</td>
+                                <td>340$</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </label>
+                <label for="startDate"><br>-----Tổng Tiền : 760$</label>
             </form>
         </section>
 
