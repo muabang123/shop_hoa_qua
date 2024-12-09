@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
+    <title>Thêm Sản Phẩm</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/admin.css"> <!-- Đường dẫn tới CSS -->
+    <style>
+        div.aA00 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="../assets/img/logo.png" alt="Logo" class="sidebar-logo">
+        </div>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="user-management.html">Quản Lý Người Dùng</a></li>
+            <li><a href="product-managerment-p1.html">Quản Lý Sản Phẩm</a></li>
+            <li><a href="QuanLyDonHang.html" class="active">Quản Lý Đơn Hàng </a></li>
+            <li><a href="add-product.html">Thêm Sản Phẩm</a></li>
+            <li><a href="statistics.html">Thống Kê Kinh Doanh</a></li>
+        </ul>
+    </aside>
+
+
+    <div class="content">
+        <header class="dashboard-header">
+            <h1>QUẢN LÝ ĐƠN HÀNG</h1>
+            <div class="profile-info">
+                <img src="../assets/img/avaters/avatar4.jpg" alt="Admin Avatar" class="profile-avatar">
+                <span class="profile-name">HuynhBinh</span>
+                <a href="login.html" class="logout-btn">Đăng Xuất</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <section class="add-product-form_2">
+            <form action="" method="POST" enctype="multipart/form-data">
+                <div class="aA00">
+                    <h2>Chi Tiết Đơn Hàng</h2>
+                </div>
+                <label for="startDate">-Mã đơn hàng : DH003</label>
+                <label for="startDate"><br>-Khách hàng : Lương Chước Minh</label>
+                <label for="startDate"><br>-Tình trạng :<td>
+                        <select id="status-filter">
+                            <option value="confirmed">Đã xác nhận</option>
+                            <option value="new">Chưa xử lý</option>
+                            <option value="delivered">Giao thành công</option>
+                            <option value="cancelled">Đã hủy</option>
+                        </select>
+                    </td></label>
+                <button>Lưu</button>
+                <label for="startDate"><br>-Địa chỉ : Quận 7</label>
+                <label for="startDate"><br>-Thời gian đặt : 2024-11-20</label>
+                <label for="startDate"><br>
+                    <table>
+                        <thead>
+                            <th>Sản Phẩm</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Kiwi</td>
+                                <td>50$</td>
+                                <td>10</td>
+                                <td>500$</td>
+                            </tr>
+                            <tr>
+                                <td>Dâu Tây Việt Nam</td>
+                                <td>85$</td>
+                                <td>10</td>
+                                <td>850$</td>
+                            </tr>
+                            <tr>
+                                <td>Chanh Đài Loan</td>
+                                <td>35$</td>
+                                <td>10</td>
+                                <td>350$</td>
+                            </tr>
+                            <tr>
+                                <td>Nho Melbourne</td>
+                                <td>70$</td>
+                                <td>10</td>
+                                <td>700$</td>
+                            </tr>
+                            <tr>
+                                <td>Mâm xôi</td>
+                                <td>80$</td>
+                                <td>10</td>
+                                <td>800$</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </label>
+                <label for="startDate"><br>-----Tổng Tiền : 2200$</label>
+            </form>
+        </section>
+
+
+    </div>
+
+</body>
+
+</html>
