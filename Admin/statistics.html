@@ -15,7 +15,7 @@
             <img src="../assets/img/logo.png" alt="Logo" class="sidebar-logo">
         </div>
         <ul>
-            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="dashboard.html"class="active">Dashboard</a></li>
             <li><a href="user-management.html">Quản Lý Người Dùng</a></li>
             <li><a href="product-managerment-p1.html">Quản Lý Sản Phẩm</a></li>
             <li><a href="QuanLyDonHang.html" >Quản Lý Đơn Hàng </a></li>
@@ -66,45 +66,57 @@
                         <tr>
                             <td class="product-image">
                                 <a href="product_1.html"><img src="../assets/img/products/product-img-1.jpg" alt=""></a>
-                                <span>Dâu Tây</span>
+                                <span>Dâu Tây Việt Nam</span>
                             </td>
-                            <td>50</td>
-                            <td>4,250$</td>
-                            <td>31/12/2024 08:00</td>
+                            <td>10</td>
+                            <td>850$</td>
+                            <td>22/09/2024 08:00</td>
                             <td>
-                                <button onclick="openInvoice('Dâu Tây')">Xem</button>
+                                <button onclick="openInvoice('Dâu Tây Việt Nam')">Xem</button>
                             </td>
                         </tr>
                         <tr>
                             <td class="product-image">
                                 <a href="product_2.html"><img src="../assets/img/products/product-img-2.jpg" alt=""></a>
-                                <span>Nho</span>
+                                <span>Nho Melbourne</span>
                             </td>
-                            <td>30</td>
-                            <td>2,100$</td>
-                            <td>08/01/2024 10:30</td>  
+                            <td>20</td>
+                            <td>1.400$</td>
+                            <td>12/07/2024 10:30</td>  
                             <td>
-                                <button onclick="openInvoice('Nho')">Xem</button>
+                                <button onclick="openInvoice('Nho Melbourne')">Xem</button>
                             </td> 
                         </tr>
                         <tr>
                             <td class="product-image"> 
                                 <a href="product_3.html"><img src="../assets/img/products/product-img-3.jpg" alt=""></a>
-                                <span>Chanh</span>
+                                <span>Chanh Đài Loan</span>
                             </td>
-                            <td>40</td>
-                            <td>1,400$</td>
-                            <td>23/01/2024 15:45</td>
+                            <td>18</td>
+                            <td>630$</td>
+                            <td>15/07/2024 15:45</td>
                             <td>
-                                <button onclick="openInvoice('Chanh')">Xem</button>
+                                <button onclick="openInvoice('Chanh Đài Loan')">Xem</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="product-image"> 
+                                <a href="product_4.html"><img src="../assets/img/products/product-img-4.jpg" alt=""></a>
+                                <span>Kiwi</span>
+                            </td>
+                            <td>12</td>
+                            <td>650$</td>
+                            <td>23/09/2024 15:45</td>
+                            <td>
+                                <button onclick="openInvoice('Kiwi')">Xem</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="summary">
-                    <p><strong>Tổng Thu: </strong>7,750$</p>
-                    <p><strong>Sản Phẩm Bán Chạy Nhất: </strong>Dâu Tây</p>
-                    <p><strong>Sản Phẩm Bán Ế Nhất: </strong>Chanh</p>
+                    <p><strong>Tổng Thu: </strong>2.880$</p>
+                    <p><strong>Sản Phẩm Bán Chạy Nhất: </strong>Nho Melbourne</p>
+                    <p><strong>Sản Phẩm Bán Ế Nhất: </strong>Chanh Đài Loan</p>
                 </div>
             </div>
             <!-- Thống kê theo khách hàng -->
@@ -148,7 +160,7 @@
                     </tbody>
                 </table>
                 <div class="summary">
-                    <p><strong>Khách Hàng mua nhiều nhất: </strong>Lương Chước Minh</p>
+                    <p><strong>Khách Hàng mua nhiều nhất: </strong>Ngô Quang Liêm</p>
                 </div>
             </div>
             <script>
@@ -159,31 +171,38 @@
                     const invoiceTotal = document.getElementById("invoice-total");
                 
                     const sampleData = {
-                        "Dâu Tây":[
-                            { customerName: "Ngô Quang Liêm", orderId: "DH001", date: "08/01/2024", item: "Dâu Tây", quantity:20 , price: 3.5, total: 35 },
-                            { customerName: "Trần Trung Kiên", orderId: "DH002", date: "12/03/2024", item: "Dâu Tây", quantity:20 ,price: 3.5, total: 35 },
-                            { customerName: "Lương Chước Minh", orderId: "DH003", date: "15/03/2024", item: "Dâu Tây", quantity:10, price: 3.5, total: 35 }
+                        "Dâu Tây Việt Nam":[
+                            { customerName: "Ngô Quang Liêm", orderId: "DH001", date: "23/06/2024", item: "Dâu Tây Việt Nam", quantity:6 , price: 85, total: 510 },
+                            { customerName: "Lương Chước Minh", orderId: "DH006", date: "22/09/2024", item: "Dâu Tây Việt Nam", quantity:4, price: 85, total: 340 }
                         ],
-                        "Nho":[
-                            { customerName: "Ngô Quang Liêm", orderId: "DH004", date: "08/01/2024", item: "Nho", quantity:10 , price: 3.5, total: 35 },
-                            { customerName: "Trần Trung Kiên", orderId: "DH006", date: "12/03/2024", item: "Nho", quantity:10 , price: 3.5, total: 35 },
-                            { customerName: "Lương Chước Minh", orderId: "DH003", date: "15/03/2024", item: "Nho", quantity:10, price: 3.5, total: 35 }
+                        "Nho Melbourne":[
+                            { customerName: "Lương Chước Minh", orderId: "DH005", date: "18/06/2024", item: "Nho Melbourne", quantity:7, price: 70, total: 490 },
+                            { customerName: "Ngô Quang Liêm", orderId: "DH002", date: "12/07/2024", item: "Nho Melbourne", quantity:8 , price: 70, total: 560 },
+                            { customerName: "Trần Trung Kiên", orderId: "DH003", date: "12/07/2024", item: "Nho Melbourne", quantity:5 , price: 70, total: 350 },
                         ],
-                        "Chanh":[
-                            { customerName: "Ngô Quang Liêm", orderId: "DH004", date: "08/01/2024", item: "Chanh", quantity:20 , price: 3.5, total: 35 },
-                            { customerName: "Trần Trung Kiên", orderId: "DH006", date: "12/03/2024", item: "Chanh", quantity:20 , price: 3.5, total: 35 }
+                        "Chanh Đài Loan":[ 
+                            { customerName: "Trần Trung Kiên", orderId: "DH004", date: "12/03/2024", item: "Chanh Đài Loan", quantity:9 , price: 35, total: 315 },
+                            { customerName: "Ngô Quang Liêm", orderId: "DH007", date: "15/07/2024", item: "Chanh Đài Loan", quantity:9 , price: 35, total: 315 }
+                        ],
+                        "Kiwi":[ 
+                            { customerName: "Trần Trung Kiên", orderId: "DH008", date: "18/07/2024", item: "Kiwi", quantity:7 , price: 50, total: 350 },
+                            { customerName: "Lương Chước Minh", orderId: "DH009", date: "23/09/2024", item: "Kiwi", quantity:6 , price: 50, total: 300 }
                         ],
                         "Ngô Quang Liêm": [
-                            { customerName: "Ngô Quang Liêm", orderId: "DH001", date: "08/01/2024", item: "Dâu Tây", quantity:20 , price: 3.5, total: 35 },
-                            { customerName: "Ngô Quang Liêm", orderId: "DH002", date: "12/03/2024", item: "Dâu Tây", quantity:20 ,price: 3.5, total: 35 }
+                            { customerName: "Ngô Quang Liêm", orderId: "DH001", date: "23/06/2024", item: "Dâu Tây Việt Nam", quantity:6 , price: 85, total: 510 },
+                            { customerName: "Ngô Quang Liêm", orderId: "DH002", date: "12/07/2024", item: "Nho Melbourne", quantity:8 ,price: 70, total: 560 },
+                            { customerName: "Ngô Quang Liêm", orderId: "DH007", date: "15/07/2024", item: "Chanh Đài Loan", quantity:9 ,price: 35, total: 315 }
                         ],
                         "Trần Trung Kiên": [
-                            { customerName: "Trần Trung Kiên", orderId: "DH001", date: "08/01/2024", item: "Dâu Tây", quantity:20 , price: 3.5, total: 35 },
-                            { customerName: "Trần Trung Kiên", orderId: "DH002", date: "12/03/2024", item: "Dâu Tây", quantity:20 ,price: 3.5, total: 35 }
+                            { customerName: "Trần Trung Kiên", orderId: "DH003", date: "12/07/2024", item: "Nho Melbourne", quantity:5 , price: 70, total: 350 },
+                            { customerName: "Trần Trung Kiên", orderId: "DH004", date: "10/08/2024", item: "Chanh Đài Loan", quantity:9 ,price: 35, total: 350 },
+                            { customerName: "Trần Trung Kiên", orderId: "DH008", date: "18/07/2024", item: "Kiwi", quantity:7 , price: 50, total: 350 },
                         ],
                         "Lương Chước Minh": [
-                            { customerName: "Lương Chước Minh", orderId: "DH001", date: "08/01/2024", item: "Dâu Tây", quantity:20 , price: 3.5, total: 35 },
-                            { customerName: "Lương Chước Minh", orderId: "DH002", date: "12/03/2024", item: "Dâu Tây", quantity:20 ,price: 3.5, total: 35 }
+                            { customerName: "Lương Chước Minh", orderId: "DH005", date: "18/06/2024", item: "Nho Melbourne", quantity:7 , price: 70, total: 490 },
+                            { customerName: "Lương Chước Minh", orderId: "DH006", date: "22/09/2024", item: "Dâu Tây Việt Nam", quantity:4 ,price: 85, total: 340 },
+                            { customerName: "Lương Chước Minh", orderId: "DH009", date: "23/09/2024", item: "Kiwi", quantity:6 , price: 50, total: 300 }
+                            
                         ]
                     };
                 
